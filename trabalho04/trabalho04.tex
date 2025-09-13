@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\title{FMC III - Trabalho 4}
+\author{Alexandre Ribeiro, José Ivo e Marina Medeiros}
+\date{Setembro 2025}
+
+\begin{document}
+
+\maketitle
+
+\textbf{1. Mostre que uma partição de um conjunto é pelo menos tão fina quanto outra sse a relação de equivalência associada com a primeira é uma sub-relação da relação de equivalência associada com a última.}
+
+\begin{proof}
+    Seja $A$ um conjunto e sejam $\{P_i\}_{i \in I}$ e $\{Q_j\}_{j \in J}$ duas partições de $A$.  
+    Sejam $R_P$ e $R_Q$ as relações de equivalência associadas a $\{P_i\}_{i \in I}$ e $\{Q_j\}_{j \in J}$, respectivamente.
+
+    \medskip
+    Queremos mostrar que:
+    \[
+        \{P_i\}_{i \in I} \text{ é pelo menos tão fina quanto } \{Q_j\}_{j \in J}
+        \;\;\Longleftrightarrow\;\;
+        R_P \subseteq R_Q.
+    \]
+
+    \medskip
+    ($\Rightarrow$) Suponha que $\{P_i\}_{i \in I}$ seja pelo menos tão fina quanto $\{Q_j\}_{j \in J}$. Isso significa que $\forall i \in I, \exists j \in J; P_i \subseteq Q_j$. Com isso, teremos que:
+    
+    \begin{align*}
+        \exists i \in I; a, b \in P_i
+        &\implies [(a, b) \in R_P] \land [\exists j \in J; P_i \subseteq Q_j] \\
+        &\implies [(a, b) \in R_P] \land [a, b \in Q_j] \\
+        &\implies [(a, b) \in R_P] \land [(a, b) \in R_Q] \\
+        &\implies R_P \subseteq R_Q \\
+    \end{align*}
+
+    \medskip
+    ($\Leftarrow$) Suponha que $R_P \subseteq R_Q$.  
+    
+    \begin{align*}
+        (a,b) \in R_P
+        &\implies [\exists i \in I, a, b \in P_i] \land [(a, b) \in R_Q] \\
+        &\implies [\exists i \in I, a, b \in P_i] \land [\exists j \in J, a, b \in Q_j] \\
+        &\implies \forall i \in I, \exists j \in J; P_i \subseteq Q_j
+    \end{align*}
+
+
+
+
+    \medskip
+    Concluímos que:
+    \[
+        \{P_i\}_{i \in I} \text{ é pelo menos tão fina quanto } \{Q_j\}_{j \in J}
+        \;\;\Longleftrightarrow\;\;
+        R_P \subseteq R_Q.
+    \]
+\end{proof}
+
+\end{document}
