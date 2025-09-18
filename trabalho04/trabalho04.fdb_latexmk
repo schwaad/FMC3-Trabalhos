@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1758216012 "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho04/trabalho04.tex" "trabalho04.pdf" "trabalho04" 1758216012
+["pdflatex"] 1758218055 "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho04/trabalho04.tex" "trabalho04.pdf" "trabalho04" 1758218055
   "/etc/texmf/web2c/texmf.cnf" 1736472376 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho04/trabalho04.tex" 1758216011 5381 a1460a960fbda39dc4a545b08239ab81 ""
+  "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho04/trabalho04.tex" 1758218054 5145 4012b7cfae64cb0d6d03c1e24d7e21e6 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -60,8 +60,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1757802242 165012 f177baa1c39a3ebd62c3096a43521a0d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1757802405 1436428 da213c2c537c237f732b2f1f48a8c466 ""
-  "trabalho04.aux" 1758216012 135 70e9f4f64d15ccc2335d1baf28eaec5a "pdflatex"
-  "trabalho04.tex" 1758216011 5381 a1460a960fbda39dc4a545b08239ab81 ""
+  "trabalho04.aux" 1758218055 135 70e9f4f64d15ccc2335d1baf28eaec5a "pdflatex"
+  "trabalho04.tex" 1758218054 5145 4012b7cfae64cb0d6d03c1e24d7e21e6 ""
   (generated)
   "trabalho04.aux"
   "trabalho04.log"

@@ -29,23 +29,24 @@
     ($\Rightarrow$) Suponha que $\{P_i\}_{i \in I}$ seja pelo menos tão fina quanto $\{Q_j\}_{j \in J}$. Isso significa que $\forall i \in I, \exists j \in J; P_i \subseteq Q_j$. Com isso, teremos que:
     
     \begin{align*}
-        \exists i \in I; a, b \in P_i
-        &\Leftrightarrow (a, b) \in R_P \tag{\text{Def. relação de eq. associada a partição}} \\
-        &\Rightarrow (a, b) \in R_P \land a, b \in Q_j \tag{\text{$P_i \subseteq Q_j$}}\\
-        &\Leftrightarrow (a, b) \in R_P \land (a, b) \in R_Q \qquad \text{(Def. relação de eq. associada a partição)} \\
+        a, b \in P_i
+        &\Leftrightarrow (a, b) \in R_P \tag{\text{Def. $R_P$}} \\
+        P_i \subseteq Q_j
+        &\Rightarrow (a, b) \in Q_j \tag{\text{Def $\subseteq$}} \\
+        &\Rightarrow (a, b) \in R_Q \tag{\text{Def. $R_Q$}}\\
+        &\Rightarrow (a, b) \in R_P \Rightarrow (a, b) \in R_Q  \\
         &\Rightarrow R_P \subseteq R_Q \tag{\text{Def. $\subseteq$}}\\
     \end{align*}
 
     \newpage
 
     ($\Leftarrow$) Suponha que $R_P \subseteq R_Q$.  
-    
     \begin{align*}
-        (a,b) \in R_P
-        &\Rightarrow \exists i \in I, a, b \in P_i \qquad \text{(Def. relação de eq. associada a partição)} \\
-        &\Rightarrow \exists i \in I, a, b \in P_i \land (a, b) \in R_Q\qquad \text{(Def. $\subseteq$)} \\
-        &\Rightarrow \exists i \in I, a, b \in P_i \land \exists j \in J, a, b \in Q_j \qquad \text{(Def. rel. de eq. associada a partição)}\\
-        &\Rightarrow \forall i \in I, \exists j \in J; P_i \subseteq Q_j \tag{\text{Def. $\subseteq$}}\\
+        a, b \in P_i
+        &\Leftrightarrow (a,b) \in R_P  \qquad \text{(Def. $R_P$)} \\
+        &\Rightarrow (a, b) \in R_Q\qquad \text{($R_P \subseteq R_Q$} \\
+        &\Leftrightarrow a, b \in Q_j \qquad \text{(Def. $R_Q$)} \\
+        &\Rightarrow P_i\subseteq Q_j \qquad \text{(Def. $\subseteq$)} \\
     \end{align*}
 
 

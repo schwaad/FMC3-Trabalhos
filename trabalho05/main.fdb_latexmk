@@ -1,11 +1,11 @@
 # Fdb version 3
-["pdflatex"] 1758216737 "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho05/main.tex" "main.pdf" "main" 1758216737
+["pdflatex"] 1758216791 "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho05/main.tex" "main.pdf" "main" 1758216791
   "/etc/texmf/web2c/texmf.cnf" 1736472376 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1758216528 49076 892f69246034de45b16e379dfd534870 ""
   "/home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk" 1758216528 28416 08622fefb27784caf97897db6846f38d ""
   "/home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk" 1758216529 34296 1856b30a727993d13065e4f97b86029c ""
   "/home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk" 1758216529 53712 5b5427fa564adae6e684b243476d7b24 ""
-  "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho05/main.tex" 1758216737 496 e408eb8e338f64ff620ea7eecd8dec7e ""
+  "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho05/main.tex" 1758216791 454 17ce22a2a89ab0b2df74c3d0f41cae7e ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm" 1136768653 3584 ad49a18d8515beef6d92d4d3f197d0fd ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1136768653 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
@@ -82,9 +82,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1757802242 165012 f177baa1c39a3ebd62c3096a43521a0d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1757802405 1436428 da213c2c537c237f732b2f1f48a8c466 ""
-  "main.aux" 1758216737 1113 507b8530a1ddaed24eea3d8c6c345347 "pdflatex"
-  "main.out" 1758216737 308 0000f814146fcef2b1e7786d5849bc21 "pdflatex"
-  "main.tex" 1758216737 496 e408eb8e338f64ff620ea7eecd8dec7e ""
+  "main.aux" 1758216791 1113 507b8530a1ddaed24eea3d8c6c345347 "pdflatex"
+  "main.out" 1758216791 308 0000f814146fcef2b1e7786d5849bc21 "pdflatex"
+  "main.tex" 1758216791 454 17ce22a2a89ab0b2df74c3d0f41cae7e ""
   "parte1.tex" 1758216643 81 900e5837fb2547fcfb508264416bca85 ""
   "parte2.tex" 1758216652 87 4b88e85d6f1877011519cd2d78bc37e2 ""
   "parte3.tex" 1758216661 78 2fa2d1e5201dd853638f7ad4f7f1f14d ""
