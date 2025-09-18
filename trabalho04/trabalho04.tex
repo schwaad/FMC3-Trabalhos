@@ -19,7 +19,6 @@
     Seja $A$ um conjunto e sejam $\{P_i\}_{i \in I}$ e $\{Q_j\}_{j \in J}$ duas partições de $A$.  
     Sejam $R_P$ e $R_Q$ as relações de equivalência associadas a $\{P_i\}_{i \in I}$ e $\{Q_j\}_{j \in J}$, respectivamente.
 
-    \medskip
     Queremos mostrar que:
     \[
         \{P_i\}_{i \in I} \text{ é pelo menos tão fina quanto } \{Q_j\}_{j \in J}
@@ -27,28 +26,27 @@
         R_P \subseteq R_Q.
     \]
 
-    \medskip
     ($\Rightarrow$) Suponha que $\{P_i\}_{i \in I}$ seja pelo menos tão fina quanto $\{Q_j\}_{j \in J}$. Isso significa que $\forall i \in I, \exists j \in J; P_i \subseteq Q_j$. Com isso, teremos que:
     
     \begin{align*}
         \exists i \in I; a, b \in P_i
-        &\implies [(a, b) \in R_P] \land [\exists j \in J; P_i \subseteq Q_j] \\
-        &\implies [(a, b) \in R_P] \land [a, b \in Q_j] \\
-        &\implies [(a, b) \in R_P] \land [(a, b) \in R_Q] \\
-        &\implies R_P \subseteq R_Q \\
+        &\Leftrightarrow (a, b) \in R_P \tag{\text{Def. relação de eq. associada a partição}} \\
+        &\Rightarrow (a, b) \in R_P \land a, b \in Q_j \tag{\text{$P_i \subseteq Q_j$}}\\
+        &\Leftrightarrow (a, b) \in R_P \land (a, b) \in R_Q \qquad \text{(Def. relação de eq. associada a partição)} \\
+        &\Rightarrow R_P \subseteq R_Q \tag{\text{Def. $\subseteq$}}\\
     \end{align*}
 
-    \medskip
+    \newpage
+
     ($\Leftarrow$) Suponha que $R_P \subseteq R_Q$.  
     
     \begin{align*}
         (a,b) \in R_P
-        &\implies [\exists i \in I, a, b \in P_i] \land [(a, b) \in R_Q] \\
-        &\implies [\exists i \in I, a, b \in P_i] \land [\exists j \in J, a, b \in Q_j] \\
-        &\implies \forall i \in I, \exists j \in J; P_i \subseteq Q_j
+        &\Rightarrow \exists i \in I, a, b \in P_i \qquad \text{(Def. relação de eq. associada a partição)} \\
+        &\Rightarrow \exists i \in I, a, b \in P_i \land (a, b) \in R_Q\qquad \text{(Def. $\subseteq$)} \\
+        &\Rightarrow \exists i \in I, a, b \in P_i \land \exists j \in J, a, b \in Q_j \qquad \text{(Def. rel. de eq. associada a partição)}\\
+        &\Rightarrow \forall i \in I, \exists j \in J; P_i \subseteq Q_j \tag{\text{Def. $\subseteq$}}\\
     \end{align*}
-
-
 
 
     \medskip
