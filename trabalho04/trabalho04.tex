@@ -95,4 +95,46 @@ t(R \cap S) =
 Logo, a intersecção dos fechos transitivos de duas relações não é sempre igual ao fecho transitivo de sua intersecção.
 \end{proof}
 
+\textbf{3. Prove que se $R$ é uma relação binária sobre A, então $tsr(R)$ é a menor relação de equivalência que contém $R$.}
+
+\begin{proof}
+    Seja R uma relação. Vamos demonstrar que tsr(R) contém R.
+
+    \begin{align}
+        tsr(R) 
+        &\Longleftrightarrow t(s(r(R))) \\
+        &\Longleftrightarrow t((s(R \; \cup R^0))) \tag{Corolário: r(R) = R $\cup$ R$^0$ } \\
+        &\Longleftrightarrow t((R \; \cup R^0) \; \cup (R \;\cup R^0)^{-1}) \tag{Corolário: s(R) = R $\cup$ R$^{-1}$ } \\
+        &\Longleftrightarrow t(R \; \cup R^0 \; \cup R^{-1} \; \cup (R^0)^{-1} \tag{Corolário: (R $\cup$ S)$^{-1}$ = R$^{-1} \; \cup$ S$^{-1}$} \\
+        &\Longleftrightarrow t(R \; \cup R^0 \; \cup R^{-1} \cup R^0) \tag{(R$^0)^{-1} = R^0$} \\
+        &\Longleftrightarrow t(R \; \cup R^0 \; \cup R^{-1})   \tag{Idempotência} \\
+        &= \bigcup_{n=1}^{\infty} (R \cup R^{-1} \cup R^0)^{n} \tag{Definição de fecho transitivo}
+    \end{align}
+
+Assim. Sabemos que R $\subset R$ pois todo conjunto contém a si mesmo.
+
+    \begin{align}
+        R \subset R
+        &\implies R \subset R \cup R^{-1} \cup R^0  \tag{Idempotência} \\
+        &\implies R \subset (R \cup R^{-1} \cup R^0)^1 \\
+        &\implies R \subset tsr(R)
+    \end{align}
+
+Dessa forma, temos que tsr(R) contém R. \\
+Além disso, pela própria definição de fecho, sabemos que tsr(R) é uma relação de equivalência, visto que aplica as propriedades de reflexividade, simetria e transitividade. 
+\\
+\\
+Agora, demonstraremos que tsr(R) é a menor relação de equivalência que contém R.\\
+\\
+Suponha uma relação de equivalência S qualquer tal que R $\subset$ S
+\begin{align}
+    R \subset S
+    & \implies r(R) \subset S \tag{S já é reflexiva } \\
+    & \implies sr(R) \subset S \tag{S já é simétrica} \\
+    & \implies tsr(R) \subset S \tag{S já é transitiva}
+\end{align}
+Concluindo, tsr(R) sempre estará contida em uma relação de equivalência que contém R, ou seja, é a menor possível. 
+
+\end{proof}
+
 \end{document}
