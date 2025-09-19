@@ -106,7 +106,7 @@ Logo, a intersecção dos fechos transitivos de duas relações não é sempre i
         &\Longleftrightarrow t(s(r(R))) \\
         &\Longleftrightarrow t((s(R \; \cup R^0))) \tag{Corolário: r(R) = R $\cup$ R$^0$ } \\
         &\Longleftrightarrow t((R \; \cup R^0) \; \cup (R \;\cup R^0)^{-1}) \tag{Corolário: s(R) = R $\cup$ R$^{-1}$ } \\
-        &\Longleftrightarrow t(R \; \cup R^0 \; \cup R^{-1} \; \cup (R^0)^{-1} \tag{Corolário: (R $\cup$ S)$^{-1}$ = R$^{-1} \; \cup$ S$^{-1}$} \\
+        &\Longleftrightarrow t(R \; \cup R^0 \; \cup R^{-1} \; \cup (R^0)^{-1}) \tag{Corolário: (R $\cup$ S)$^{-1}$ = R$^{-1} \; \cup$ S$^{-1}$} \\
         &\Longleftrightarrow t(R \; \cup R^0 \; \cup R^{-1} \cup R^0) \tag{(R$^0)^{-1} = R^0$} \\
         &\Longleftrightarrow t(R \; \cup R^0 \; \cup R^{-1})   \tag{Idempotência} \\
         &= \bigcup_{n=1}^{\infty} (R \cup R^{-1} \cup R^0)^{n} \tag{Definição de fecho transitivo}
@@ -135,7 +135,47 @@ Suponha uma relação de equivalência S qualquer tal que R $\subset$ S
     & \implies tsr(R) \subset S \tag{S já é transitiva}
 \end{align}
 Concluindo, tsr(R) sempre estará contida em uma relação de equivalência que contém R, ou seja, é a menor possível. 
+\\
 
 \end{proof}
+\textbf{4. Prove o corolário: Seja R uma relação sobre A, então $t(R) = R \; \cup R^2 \; \cup \; ... \; R^n  $, se A é finito, com n elementos.}
 
+\begin{proof}
+Seja R uma relação sobre A, apliquemos indução sobre n.
+\\
+
+\textbf{Passo Base:} $n=1$. \\
+Seja $|A|= 1$, A apenas possui um elemento. \\
+As únicas relações possíveis sobre $A$ são
+$\varnothing$ ou $\{(a,a)\}$. Em ambos os casos, não existe cadeia $(x,y),(y,z)\in R$ com $x\ne z$ capaz de gerar um par novo, logo, R já é transitiva por vacuidade e t(R) = R.  
+\\
+\\
+Ou seja, Vale a base.
+\\
+\textbf{Passo Indutivo:}
+\\
+Hipótese Indutiva: \\
+$|A| = k \implies t(R)= R^1 \; \cup R^2 \; \cup \;... \; R^k$
+\\
+\\
+Queremos provar que: \\
+$|A| = k + 1 \implies t(R)= R^1 \; \cup R^2 \; \cup \;... \; R^k \; \cup R^{k+1}$
+
+A partir da hipótese, tome o seguinte:
+
+\begin{align}
+    |A| = k
+    &\implies t(R) = R^1 \; \cup R^2 \; \cup \; ... \cup \; R^k \\
+    &\implies t(R) \; o  \;R = (R^1 \; \cup R^2 \; \cup \; ... \cup \; R^k) \; o \;R \\
+    &\implies t(R) \; o  \;R = (R^1 \;o \; R)  \; \cup (R^2 o \; R) \; \cup \; ... \cup \; (R^k o \; R) \tag{Distrib.} \\
+    &\implies t(R) \; o  \;R = R^2 \; \cup R^3 \; \cup \; ... \cup \; R^{k+1} 
+\end{align}
+E pelo passo base, um elemento equivale a R. $(|A| = 1 \implies t(R) = R)$ \\
+Assim, adicionando um elemento a A, teremos que: \\
+$|A| = k + 1 \implies(R)= R^1 \; \cup R^2 \; \cup \;... \; R^k \; \cup R^{k+1}$
+\\
+\\
+E está provado.
+
+\end{proof}
 \end{document}
