@@ -1,3 +1,59 @@
-\section{Introdução}
+\textbf{1. Mostre que a relação de 'ser pelo menos tão fina quanto' entre as partições de um conjunto A é uma ordem parcial}
 
-Aqui vai o texto da introdução, escrito pelo colega 1.
+Mostraremos que a relação de 'ser pelo menos tão fina quanto' entre as partições de um conjunto A tem as seguintes propriedades: reflexividade, transitividade e antissimetria.\\
+Para facilitar a organização, considere que \textbf{"TFQ"} significa "é pelo menos tão fina quanto".
+
+\textbf{(i) Reflexividade:}
+Seja A um conjunto e $\{P_i\}_{i \in I}$ uma partição de A. \\
+\begin{align*}
+    P_i \subseteq P_i 
+    &\Longrightarrow \forall i \in I, \exists j \in J, P_i \subseteq P_j \tag*{\text{($j = i$)}} \\
+    &\Longrightarrow \{P_i\}_{i \in I} \text{ TFQ } \{P_i\}_{i \in I}
+\end{align*}
+
+Logo, a relação é reflexiva.
+
+\textbf{(ii) Transitividade:}
+Seja $A$ um conjunto e $\{P_i\}_{i \in I}$, $\{Q_j\}_{j \in J}$, $\{S_k\}_{k \in K}$ partições de $A$, tais que: \\
+$\{P_i\}_{i \in I}$ é tão fina quanto $\{Q_j\}_{j \in J}$ e $\{Q_j\}_{j \in J}$ é tão fina quanto $\{S_k\}_{k \in K}$.
+
+\begin{align*}
+    \{P_i\}_{i \in I} \text{ TFQ } \{Q_j\}_{j \in J} \;\land\; \{Q_j\}_{j \in J} \text{ TFQ } \{S_k\}_{k \in K}
+    &\implies \forall i \in I, \exists j \in J,\; P_i \subseteq Q_j \\
+    &\qquad\land\; \forall j \in J, \exists k \in K,\; Q_j \subseteq S_k \\
+    &\implies \forall i \in I, \exists k \in K,\; P_i \subseteq S_k \tag*{\text{(Transitividade de $\subseteq$)}}
+\end{align*}
+
+Logo, a relação é transitiva.
+
+\textbf{(iii) Antissimetria:}
+Seja $A$ um conjunto e $\{P_i\}_{i \in I}$ e $\{Q_j\}_{j \in J}$ partições de $A$.
+
+\begin{align*}
+    \text{(i)}\quad 
+    \{P_i\}_{i \in I} \text{ TFQ } \{Q_j\}_{j \in J}
+    &\implies \forall i \in I, \exists j \in J,\; P_i \subseteq Q_j
+\end{align*}
+
+\begin{align*}
+    \text{(ii)}\quad 
+    \{Q_j\}_{j \in J} \text{ TFQ } \{P_i\}_{i \in I}
+    &\implies \forall j \in J, \exists i \in I,\; Q_j \subseteq P_i 
+\end{align*}
+
+Logo, de (i) e (ii), temos $\{P_i\}_{i \in I} = \{Q_j\}_{j \in J}$. Com isso, temos que a relação é antissimétrica.
+
+Portanto, a  relação de 'ser pelo menos tão fina quanto' entre as partições de um conjunto A é uma ordem parcial\\\\
+
+\textbf{2. Mostre que a relação de identidade sobre um conjutno não vazio A é a única ordem parcial de A que também é uma relação de equivalência.}
+
+\begin{proof}
+Suponha que R é uma ordem parcial e de equivalência de A.\\
+Se $a \neq b$:
+\begin{align*}
+    (a, b) \in R 
+    &\implies (b, a) \in R \tag*{\text{(Simetria)}}\\
+    &\implies a = b \tag*{\text{(Antissimetria)}}
+\end{align*}
+Aqui, chegamos a um absurdo. Logo, se $ a \neq b$, $(a,b) \notin R$.\\ Ou seja, $R = {I_d}_A$ 
+\end{proof}

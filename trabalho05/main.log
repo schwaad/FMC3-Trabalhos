@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.9.13)  18 SEP 2025 14:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.9.13)  25 SEP 2025 16:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -306,25 +306,45 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+) (./parte1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./parte1.tex) (./parte2.tex) (./parte3.tex) [2] (./main.aux)
+ []
+
+
+Overfull \hbox (24.46872pt too wide) detected at line 25
+[]
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+) (./parte2.tex) (./parte3.tex) [2] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0000F814146FCEF2B1E7786D5849BC21;308.
+(rerunfilecheck)             Checksum: 399BE2905B7EF02B2879DBA8EA266FB1;209.
  ) 
 Here is how much of TeX's memory you used:
- 10576 strings out of 480154
- 163705 string characters out of 5893788
- 455623 words of memory out of 5000000
- 28391 multiletter control sequences out of 15000+600000
- 476005 words of font info for 45 fonts, out of 8000000 for 9000
+ 10619 strings out of 480154
+ 164182 string characters out of 5893788
+ 468623 words of memory out of 5000000
+ 28420 multiletter control sequences out of 15000+600000
+ 483342 words of font info for 66 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 60i,6n,63p,282b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk>
-Output written on main.pdf (2 pages, 30082 bytes).
+ 60i,10n,63p,288b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (2 pages, 102935 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 239 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
+ 17 words of extra memory for PDF output out of 10000 (max. 10000000)
 
