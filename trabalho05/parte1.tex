@@ -1,27 +1,35 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+
+\begin{document}
+
 \textbf{1. Mostre que a relação de 'ser pelo menos tão fina quanto' entre as partições de um conjunto A é uma ordem parcial}
 
-Mostraremos que a relação de 'ser pelo menos tão fina quanto' entre as partições de um conjunto A tem as seguintes propriedades: reflexividade, transitividade e antissimetria.\\
+Mostraremos que a relação de 'ser pelo menos tão fina quanto' entre as partições de um conjunto A tem as seguintes propriedades: reflexividade, transitividade e antissimetria.
+
 Para facilitar a organização, considere que \textbf{"TFQ"} significa "é pelo menos tão fina quanto".
 
 \textbf{(i) Reflexividade:}
-Seja A um conjunto e $\{P_i\}_{i \in I}$ uma partição de A. \\
+Seja A um conjunto e $\{P_i\}_{i \in I}$ uma partição de A.
 \begin{align*}
-    P_i \subseteq P_i 
-    &\Longrightarrow \forall i \in I, \exists j \in J, P_i \subseteq P_j \tag*{\text{($j = i$)}} \\
-    &\Longrightarrow \{P_i\}_{i \in I} \text{ TFQ } \{P_i\}_{i \in I}
+	P_i \subseteq P_i
+	 & \Longrightarrow \forall i \in I, \exists j \in J, P_i \subseteq P_j \tag*{\text{($j = i$)}} \\
+	 & \Longrightarrow \{P_i\}_{i \in I} \text{ TFQ } \{P_i\}_{i \in I}
 \end{align*}
 
 Logo, a relação é reflexiva.
 
 \textbf{(ii) Transitividade:}
-Seja $A$ um conjunto e $\{P_i\}_{i \in I}$, $\{Q_j\}_{j \in J}$, $\{S_k\}_{k \in K}$ partições de $A$, tais que: \\
+Seja $A$ um conjunto e $\{P_i\}_{i \in I}$, $\{Q_j\}_{j \in J}$, $\{S_k\}_{k \in K}$ partições de $A$, tais que
 $\{P_i\}_{i \in I}$ é tão fina quanto $\{Q_j\}_{j \in J}$ e $\{Q_j\}_{j \in J}$ é tão fina quanto $\{S_k\}_{k \in K}$.
 
 \begin{align*}
-    \{P_i\}_{i \in I} \text{ TFQ } \{Q_j\}_{j \in J} \;\land\; \{Q_j\}_{j \in J} \text{ TFQ } \{S_k\}_{k \in K}
-    &\implies \forall i \in I, \exists j \in J,\; P_i \subseteq Q_j \\
-    &\qquad\land\; \forall j \in J, \exists k \in K,\; Q_j \subseteq S_k \\
-    &\implies \forall i \in I, \exists k \in K,\; P_i \subseteq S_k \tag*{\text{(Transitividade de $\subseteq$)}}
+	\{P_i\}_{i \in I} \text{ TFQ } \{Q_j\}_{j \in J} \;\land\; \{Q_j\}_{j \in J} \text{ TFQ } \{S_k\}_{k \in K}
+	 & \implies \forall i \in I, \exists j \in J,\; P_i \subseteq Q_j                                               \\
+	 & \qquad\land\; \forall j \in J, \exists k \in K,\; Q_j \subseteq S_k                                          \\
+	 & \implies \forall i \in I, \exists k \in K,\; P_i \subseteq S_k \tag*{\text{(Transitividade de $\subseteq$)}}
 \end{align*}
 
 Logo, a relação é transitiva.
@@ -30,30 +38,81 @@ Logo, a relação é transitiva.
 Seja $A$ um conjunto e $\{P_i\}_{i \in I}$ e $\{Q_j\}_{j \in J}$ partições de $A$.
 
 \begin{align*}
-    \text{(i)}\quad 
-    \{P_i\}_{i \in I} \text{ TFQ } \{Q_j\}_{j \in J}
-    &\implies \forall i \in I, \exists j \in J,\; P_i \subseteq Q_j
+	\text{(i)}\quad
+	\{P_i\}_{i \in I} \text{ TFQ } \{Q_j\}_{j \in J}
+	 & \implies \forall i \in I, \exists j \in J,\; P_i \subseteq Q_j
 \end{align*}
 
 \begin{align*}
-    \text{(ii)}\quad 
-    \{Q_j\}_{j \in J} \text{ TFQ } \{P_i\}_{i \in I}
-    &\implies \forall j \in J, \exists i \in I,\; Q_j \subseteq P_i 
+	\text{(ii)}\quad
+	\{Q_j\}_{j \in J} \text{ TFQ } \{P_i\}_{i \in I}
+	 & \implies \forall j \in J, \exists i \in I,\; Q_j \subseteq P_i
 \end{align*}
 
 Logo, de (i) e (ii), temos $\{P_i\}_{i \in I} = \{Q_j\}_{j \in J}$. Com isso, temos que a relação é antissimétrica.
 
-Portanto, a  relação de 'ser pelo menos tão fina quanto' entre as partições de um conjunto A é uma ordem parcial\\\\
+Portanto, a  relação de 'ser pelo menos tão fina quanto' entre as partições de um conjunto A é uma ordem parcial.
+
+\bigskip
 
 \textbf{2. Mostre que a relação de identidade sobre um conjutno não vazio A é a única ordem parcial de A que também é uma relação de equivalência.}
 
 \begin{proof}
-Suponha que R é uma ordem parcial e de equivalência de A.\\
-Se $a \neq b$:
-\begin{align*}
-    (a, b) \in R 
-    &\implies (b, a) \in R \tag*{\text{(Simetria)}}\\
-    &\implies a = b \tag*{\text{(Antissimetria)}}
-\end{align*}
-Aqui, chegamos a um absurdo. Logo, se $ a \neq b$, $(a,b) \notin R$.\\ Ou seja, $R = {I_d}_A$ 
+	Suponha que R é uma ordem parcial e de equivalência de A.
+	Se $a \neq b$:
+	\begin{align*}
+		(a, b) \in R
+		 & \implies (b, a) \in R \tag*{\text{(Simetria)}} \\
+		 & \implies a = b \tag*{\text{(Antissimetria)}}
+	\end{align*}
+	Aqui, chegamos a um absurdo. Logo, se $ a \neq b$, $(a,b) \notin R$. Ou seja, $R = {I_d}_A$.
 \end{proof}
+
+\bigskip
+
+\textbf{3. Mostre que todo conjunto finito A é bem fundado sob qualquer reação transitiva e irreflexiva sobre ele}
+
+\begin{proof}
+	Seja $A$ finito e $R$ transitiva e irreflexiva sobre $A$:
+
+	Suponha por absurdo que A não é bem fundado sob R.
+
+	Seja S uma sequência infinita decrescente $S = (s_1,s_2,...,s_i)$
+
+	\[
+		\exists (s_i): s_{i+1}Rs_i
+		\;\implies\; \exists j>k: s_j=s_k \quad (\text{$A$ finito, princípio da casa dos pombos})
+	\]
+	\[
+		\implies s_jRs_k \quad (\text{pela transitividade na cadeia $s_jRs_{j-1}\cdots Rs_k$})
+	\]
+	\[
+		\implies s_jRs_j \quad (\text{pois $s_j=s_k$})
+	\]
+	\[
+		\implies \text{contradição} \quad (\text{irreflexividade de $R$}).
+	\]
+	Portanto, $A$ é bem fundado.
+\end{proof}
+
+\bigskip
+
+\textbf{4. Seja A qualquer conjunto finito. Mostre que seu conjunto de potências $\mathscr{P}(A)$ está bem fundado na relação de inclusão apropriada de conjunto.}
+
+\begin{proof}
+	Seja $S=(A_i)$ cadeia descendente em $\mathscr{P}(A)$:
+	\[
+		A_{i+1}\subset A_i
+		\;\implies\; |A_{i+1}|<|A_i| \quad (\text{Def. Cardinalidade})
+	\]
+	\[
+		\implies |A| > \cdots > |A_2| > |A_1| \ge 0 \quad (\text{Def. P)}
+	\]
+	\[
+		\implies \text{sequência finita} \quad (\text{Começa em A e termina em } \emptyset).
+	\]
+	Logo, $\mathscr{P}(A)$ é bem fundado sob $\subset$.
+\end{proof}
+
+\end{document}
+
