@@ -1,10 +1,3 @@
-\documentclass{article}
-\usepackage{amsmath,amssymb,amsthm}
-\usepackage[utf8]{inputenc}
-\usepackage[brazil]{babel}
-
-\begin{document}
-
 \textbf{1. Mostre que a relação de 'ser pelo menos tão fina quanto' entre as partições de um conjunto A é uma ordem parcial}
 
 Mostraremos que a relação de 'ser pelo menos tão fina quanto' entre as partições de um conjunto A tem as seguintes propriedades: reflexividade, transitividade e antissimetria.
@@ -69,50 +62,4 @@ Portanto, a  relação de 'ser pelo menos tão fina quanto' entre as partições
 \end{proof}
 
 \bigskip
-
-\textbf{3. Mostre que todo conjunto finito A é bem fundado sob qualquer reação transitiva e irreflexiva sobre ele}
-
-\begin{proof}
-	Seja $A$ finito e $R$ transitiva e irreflexiva sobre $A$:
-
-	Suponha por absurdo que A não é bem fundado sob R.
-
-	Seja S uma sequência infinita decrescente $S = (s_1,s_2,...,s_i)$
-
-	\[
-		\exists (s_i): s_{i+1}Rs_i
-		\;\implies\; \exists j>k: s_j=s_k \quad (\text{$A$ finito, princípio da casa dos pombos})
-	\]
-	\[
-		\implies s_jRs_k \quad (\text{pela transitividade na cadeia $s_jRs_{j-1}\cdots Rs_k$})
-	\]
-	\[
-		\implies s_jRs_j \quad (\text{pois $s_j=s_k$})
-	\]
-	\[
-		\implies \text{contradição} \quad (\text{irreflexividade de $R$}).
-	\]
-	Portanto, $A$ é bem fundado.
-\end{proof}
-
-\bigskip
-
-\textbf{4. Seja A qualquer conjunto finito. Mostre que seu conjunto de potências $\mathscr{P}(A)$ está bem fundado na relação de inclusão apropriada de conjunto.}
-
-\begin{proof}
-	Seja $S=(A_i)$ cadeia descendente em $\mathscr{P}(A)$:
-	\[
-		A_{i+1}\subset A_i
-		\;\implies\; |A_{i+1}|<|A_i| \quad (\text{Def. Cardinalidade})
-	\]
-	\[
-		\implies |A| > \cdots > |A_2| > |A_1| \ge 0 \quad (\text{Def. P)}
-	\]
-	\[
-		\implies \text{sequência finita} \quad (\text{Começa em A e termina em } \emptyset).
-	\]
-	Logo, $\mathscr{P}(A)$ é bem fundado sob $\subset$.
-\end{proof}
-
-\end{document}
 

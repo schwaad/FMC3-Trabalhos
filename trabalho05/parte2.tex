@@ -1,3 +1,71 @@
-\section{Desenvolvimento}
+\textbf{3. Sejam as seguintes definições:}
+\\
+\textbf{Definição 1 (conjunto bem fundado): seja $W$ qualquer conjunto e $<$ qualquer relação irreflexiva e transitiva sobre $W$ (atenção: não estamos exigindo linearidade, ou seja, que a relação também seja completa). Dizemos que $W$ é bem fundado por $<$ sse todo subconjunto não vazio $A \subset W$ tiver pelo menos um elemento minimal.} \\
+\\
+\textbf{Definição 2 (conjunto bem fundado): seja $W$ qualquer conjunto e $<$ qualquer relação irreflexiva e transitiva sobre $W$. Então, $W$ é bem fundamentado por $<$ se não houver encadeamento descendente infinito ... $<$ $a_2 < a_1 < a_0$ de elementos de $W$.}\\
+\\
+\textbf{Demonstre que as definições são equivalentes.}
 
-Aqui vai o texto do desenvolvimento, escrito pelo colega 2.
+\begin{proof}
+    Seja $W$ um conjunto qualquer e $<$ uma relação qualquer irreflexiva e transitiva sobre $W$. A partir disso, temos que.\\
+    1. $\forall a\in W, (a,a) \not\in \; <$ \\
+    2. $\forall a, b,c \in W, (a,b)\in  \; <$ e $(b,c) \in \; < \implies (a,c) \in \;<$ \\
+    Agora, vamos demonstrar a equivalência entre as definições. \\
+    \\
+    \textbf{Definição 1 $\implies$ Definição 2}\\
+    Suponha por absurdo que existe um encadeamento descendente infinito sobre W. Isto é:
+    $a_n < a_{n-1} < \; ... \; < a_2<a_1<a_0$. 
+    \\ E Seja A um subconjunto de W definidos como: $A = \{a_n:n\in \mathbb{N}\}$   \\
+    Pela hipótese: 
+    \begin{align}
+        \forall a_n \in A \subset W, \exists a_{n+1} \text{ tal que } a_{n+1} < a_n
+        &\Longleftrightarrow \neg(\not\exists a_{n+1} , a_{n+1} < a_n) \\
+        &\implies \text{Não existe minimal} \tag{Contradição}
+    \end{align}
+    A hipótese quebra a definição 1, logo, ela está errada e não existe sequência infinita decrescente. 
+    \\
+    \textbf{Definição 2 $\implies$ Definição 1}
+    \\
+    Não existe sequência decrescente $a_n < a_{n-1} < \; ... < a_2<a_1<a_0$ \\
+    \\
+    Suponha por absurdo que não existe minimal em um subconjunto da relação, isto é: $\forall A\subset  W, \not\exists x \in A$, x minimal.
+    \begin{align}
+        A\subset  W, \not\exists x \in A, \text{x minimal} 
+        &\implies \neg(\forall y \in A, y \not< x) \tag{Neg. def.} \\
+        &\implies (\exists y \in A, y<x) \\
+        &\implies (\exists y \in A, y<a_0) \tag{$x = a_0$} \\ 
+        &\implies a_0 \text{ Não é minimal} \\
+        &\implies (\exists a_1 \in A, a_1<a_0) \tag{$x = a_1$} \\
+        &\implies a_1 \text{ Não é minimal} \\
+        &\implies a_{n+1}<a_n \tag{Repetindo Recursivamente } \\
+        &\implies a_n<a_{n-1}< \; ... \; < a_2 <a_1 <a_0
+    \end{align}
+    Contudo, isso é uma contradição, pela definição 2, essa sequência não existe. \\
+    Logo, a suposição estava errada e existe pelo menos um minimal em um subconjunto da relação. 
+\end{proof}
+
+\textbf{4. O conjunto vazio é bem fundado na relação vazia? Demonstre}
+
+\begin{proof}
+    Seja $W = \emptyset$ e $<$ uma relação vazia sobre W. 
+    \\
+    Por vacuidade, sabemos que $<$ é irreflexiva \\
+    $\forall a \in \emptyset \rightarrow (a,a) \not\in \;< \implies \forall a \in \emptyset, (a,a) \not\in \;<$ \\
+    \\
+    Por vacuidade, sabemos que $<$ é transitiva \\
+    $\forall a,b,c \in \emptyset \rightarrow (a,b) \in \;< \text{ e } (b,c) \in \;< \implies (a,c) \in \;<$
+    \\
+    \\
+    A partir da definição 1, prova-se por vacuidade: \\
+    $\forall A\subset \emptyset, A\not=\emptyset \implies \exists x \in A \text{ minimal}
+    \implies < \text{é bem fundada}$\\
+    \\
+   Logo a definição 1 é válida\\
+    \\
+    A partir da definição 2: \\
+    Suponha que existe uma sequência infinita $a_0, a_1, a_2, a_3, \;..., \;a_n,a_{n+1}, \text{ tal que }a_{n+1} < a_n \implies a_n \in W\;$
+    \\ Contudo, isso é uma contradição, pois
+    $W = \emptyset \implies \not\exists x \in \emptyset$
+    \\ Logo, não existe sequência infinita decrescente no vazio, e a relação é bem fundada. 
+    
+\end{proof}
