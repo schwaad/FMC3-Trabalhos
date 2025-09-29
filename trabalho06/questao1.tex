@@ -1,0 +1,26 @@
+\section*{Questão 1}
+
+Dadas as fórmulas:
+
+\begin{enumerate}[label=\roman*)]
+    \item $Q \land \lnot P \rightarrow P$
+    \item $(P \lor Q) \land R$
+\end{enumerate}
+
+\noindent
+(a) Use equivalências para transformá-las em FND.
+
+\subsubsection*{i.}
+\begin{align*}
+    (Q \land \lnot P) \rightarrow P
+    &\Leftrightarrow \lnot (Q \land \lnot P) \lor P \\[6pt]
+    &\Leftrightarrow (\lnot Q \lor \lnot \lnot P) \lor P \\[6pt]
+    &\Leftrightarrow (\lnot Q \lor P) \lor P \\[6pt]
+    &\Leftrightarrow (\lnot Q \lor P)
+\end{align*}
+
+\subsubsection*{ii.}
+\begin{align*}
+    (P \lor Q) \land R
+    &\Leftrightarrow (R \land P) \lor (R \land Q)
+\end{align*}

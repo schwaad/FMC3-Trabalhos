@@ -1,0 +1,78 @@
+\section*{Questão 2}
+
+Para cada função, escreva as representações da FND completa e da FNC completa.
+
+\subsection*{a) $f(P, Q) =$ Verdadeiro sse $Q$ for Verdadeiro}
+
+Primeiro, a tabela-verdade:
+
+\[
+\begin{array}{|c c|c|}
+\hline
+P & Q & f(P, Q) \\
+\hline
+V & V & V \\
+V & F & F \\
+F & V & V \\
+F & F & F \\
+\hline
+\end{array}
+\]
+
+Note que a função é equivalente a $Q$.
+
+\subsubsection*{FNC completa}
+\begin{align*}
+    Q &\Leftrightarrow Q \lor \text{Falso} \\
+      &\Leftrightarrow Q \lor (P \land \lnot P) \\
+      &\Leftrightarrow (Q \lor P) \land (Q \lor \lnot P)
+\end{align*}
+
+\subsubsection*{FND completa}
+\begin{align*}
+    Q &\Leftrightarrow Q \land \text{Verdadeiro} \\
+      &\Leftrightarrow Q \land (P \lor \lnot P) \\
+      &\Leftrightarrow (Q \land P) \lor (Q \land \lnot P)
+\end{align*}
+
+\subsection*{b) $f(P, Q, R) =$ Verdadeiro sse $P$ for Verdadeiro ou $Q$ for Falso}
+
+Tabela-verdade:
+
+\[
+\begin{array}{|c c c|c| c|}
+P & Q & R & f(P, Q) & P \lor \lnot Q\\ % Use & to separate the columns
+\hline % Put a horizontal line between the table header and the rest.
+V & V & V & V & V\\
+V & V & F & V & V\\
+V & F & V & V & V\\
+V & F & F & V & V\\
+F & V & V & F & F\\
+F & V & F & F & F\\
+F & F & V & V & V\\
+F & F & F & V & V\\
+\hline
+\end{array}
+\]
+
+Observe que a função é equivalente a $P \lor \lnot Q$.
+
+\subsubsection*{FND completa}
+\begin{align*}
+    P \lor \lnot Q
+    &\Leftrightarrow (\lnot P \land \lnot \lnot Q)\\
+    &\Leftrightarrow (\lnot P \land Q)\\
+    &\Leftrightarrow (\lnot P \land Q) \land \text{Verdadeiro}\\
+    &\Leftrightarrow (\lnot P \land Q) \land (R \lor \lnot R)\\
+    &\Leftrightarrow [(\lnot P \land Q) \land R] \lor [(\lnot P \land Q) \land \lnot R]\\
+    &\Leftrightarrow [\lnot P \land Q \land R] \lor [\lnot P \land Q \land \lnot R]
+\end{align*}
+
+\subsubsection*{FNC completa}
+\begin{align*}
+    P \lor \lnot Q
+    &\Leftrightarrow (P \lor \lnot Q) \lor \text{Falso}\\
+    &\Leftrightarrow (P \lor \lnot Q) \lor (R \land \lnot R)\\
+    &\Leftrightarrow [(P \lor \lnot Q) \lor R] \land [(P \lor \lnot Q) \lor \lnot R]\\
+    &\Leftrightarrow [P \lor \lnot Q \lor R] \land [P \lor \lnot Q \lor \lnot R]
+\end{align*}
