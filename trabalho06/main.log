@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.9.13)  28 SEP 2025 22:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.9.13)  28 SEP 2025 22:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -322,25 +322,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 23.
  (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) (./questao1.tex) (./questao2.tex [1
+) (./questao1.tex [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]) (./questao3.tex) [3] (./main.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./questao2.tex [2] [3]) (./questao3.tex) [4] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10987 strings out of 480154
- 170991 string characters out of 5893788
+ 10999 strings out of 480154
+ 171118 string characters out of 5893788
  475148 words of memory out of 5000000
  28768 multiletter control sequences out of 15000+600000
  484423 words of font info for 72 fonts, out of 8000000 for 9000
  61 hyphenation exceptions out of 8191
- 60i,10n,63p,288b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,10n,63p,288b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (3 pages, 69383 bytes).
+Output written on main.pdf (4 pages, 75281 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
- 16 named destinations out of 1000 (max. 500000)
+ 219 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
+ 28 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
