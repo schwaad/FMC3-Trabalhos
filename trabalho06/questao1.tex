@@ -3,43 +3,178 @@
 Dadas as fórmulas:
 
 \begin{enumerate}[label=\roman*)]
-    \item $Q \land \lnot P \rightarrow P$
-    \item $(P \lor Q) \land R$
+	\item $Q \land \lnot P \rightarrow P$
+	\item $(P \lor Q) \land R$
 \end{enumerate}
 
 \noindent
 (a) Use equivalências para transformá-las em FNC.
 
 \subsubsection*{i.}
+
 \begin{align*}
-    (Q \land \lnot P) \rightarrow P
-    &\Leftrightarrow \lnot (Q \land \lnot P) \lor P \\[6pt]
-    &\Leftrightarrow (\lnot Q \lor \lnot \lnot P) \lor P \\[6pt]
-    &\Leftrightarrow (\lnot Q \lor P) \lor P \\[6pt]
-    &\Leftrightarrow (\lnot Q \lor P)
+	(Q \land \lnot P) \rightarrow P
+	 & \Leftrightarrow \lnot (Q \land \lnot P) \lor P      \\[6pt]
+	 & \Leftrightarrow (\lnot Q \lor \lnot \lnot P) \lor P \\[6pt]
+	 & \Leftrightarrow (\lnot Q \lor P) \lor P             \\[6pt]
+	 & \Leftrightarrow (\lnot Q \lor P)
 \end{align*}
 
 \subsubsection*{ii.}
+
 \begin{align*}
-    (P \lor Q) \land R
-    &\Leftrightarrow (R \land P) \lor (R \land Q)
+	(P \lor Q) \land R
+	 & \Leftrightarrow (R \land P) \lor (R \land Q)
 \end{align*}
 
 
+\newpage
 \noindent
 (b) Use equivalências para transformá-las em uma FNC.
 
 \subsubsection*{i.}
+
+\begin{align*}
+	(Q \land \lnot P) \rightarrow P                         \\
+	 & \Leftrightarrow \lnot (Q \land \lnot P) \lor P       \\
+	 & \Leftrightarrow \lnot Q \land \lnot(\lnot P) \land P \\
+	 & \Leftrightarrow \lnot Q \land P \land P              \\
+	 & \Leftrightarrow \lnot Q \land P
+\end{align*}
+
 \subsubsection*{ii.}
+A fbf $(P \lor Q) \land R$ já é uma FNC, pois é a conjunção de uma disjunção de literais e um literal.
+
+\newpage
 
 \noindent
 (c) Transforme as fbfs em uma FND completa, se possível
 
 \subsubsection*{i.}
-\subsubsection*{ii.}
+Podemos fazer a transformação por meio do método da tabela verdade, utilizando a equivalência demonstrada anteriormente:
 
+
+$ \ $
+
+
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	$Q$ & $P$ & $\lnot Q$ & $\lnot Q \lor P$ \\
+	\hline
+	$V$ & $V$ & $F$       & $V$              \\
+	\hline
+	$V$ & $F$ & $F$       & $F$              \\
+	\hline
+	$F$ & $V$ & $V$       & $V$              \\
+	\hline
+	$F$ & $F$ & $V$       & $V$              \\
+	\hline
+\end{tabular}
+
+
+$ \ $
+
+
+Portanto, a FND completa é:
+
+
+$(Q \land P) \lor (\lnot Q \land P) \lor (\lnot Q \land \lnot P)$
+\subsubsection*{ii.}
+Podemos fazer a transformação por meio do método da tabela verdade, utilizando a equivalência demonstrada anteriormente:
+
+
+$ \ $
+
+
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	$P$ & $Q$ & $R$ & $(R \land P) \lor (R \land Q)$ \\
+	\hline
+	$V$ & $V$ & $V$ & $V$                            \\
+	\hline
+	$F$ & $V$ & $V$ & $V$                            \\
+	\hline
+	$V$ & $F$ & $V$ & $V$                            \\
+	\hline
+	$V$ & $V$ & $F$ & $F$                            \\
+	\hline
+	$F$ & $F$ & $V$ & $F$                            \\
+	\hline
+	$F$ & $V$ & $F$ & $F$                            \\
+	\hline
+	$V$ & $F$ & $F$ & $F$                            \\
+	\hline
+	$F$ & $F$ & $F$ & $F$                            \\
+	\hline
+\end{tabular}
+
+
+$ \ $
+
+
+Portanto, a FND completa é:
+
+
+$(P \land Q \land R) \lor (\lnot P \land Q \land R) \lor (P \land \lnot Q \land R)$
+
+\newpage
 \noindent
 (d) Transforme as fbfs em uma FNC completa, se possível
 
 \subsubsection*{i.}
+A fbf $\lnot Q \land P$ já é uma FNC completa, pois é a conjunção de dois literais. Segue a prova por tabela verdade:
+
+
+$ \ $
+
+
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	$Q$ & $P$ & $\lnot Q$ & $\lnot Q \land P$ \\
+	\hline
+	$V$ & $V$ & $F$       & $F$               \\
+	\hline
+	$F$ & $V$ & $V$       & $V$               \\
+	\hline
+	$V$ & $F$ & $F$       & $F$               \\
+	\hline
+	$F$ & $F$ & $V$       & $F$               \\
+	\hline
+\end{tabular}
 \subsubsection*{ii.}
+Podemos fazer a transformação por meio do método da tabela verdade, utilizando a equivalência demonstrada anteriormente:
+
+
+$ \ $
+
+
+\begin{tabular}{|c|c|c|c|}
+	\hline
+	$P$ & $Q$ & $R$ & $(P \lor Q) \land R$ \\
+	\hline
+	$V$ & $V$ & $V$ & $V$                  \\
+	\hline
+	$F$ & $V$ & $V$ & $V$                  \\
+	\hline
+	$V$ & $F$ & $V$ & $V$                  \\
+	\hline
+	$V$ & $V$ & $F$ & $F$                  \\
+	\hline
+	$F$ & $F$ & $V$ & $F$                  \\
+	\hline
+	$F$ & $V$ & $F$ & $F$                  \\
+	\hline
+	$V$ & $F$ & $F$ & $F$                  \\
+	\hline
+	$F$ & $F$ & $F$ & $F$                  \\
+	\hline
+\end{tabular}
+
+
+$ \ $
+
+
+Portanto, a FNC completa é:
+
+$(P \lor Q \lor R) \land (\lnot P \lor Q \lor R) \land (P \lor \lnot Q \lor R) \land (P \lor Q \lor \lnot R) \land (\lnot P \lor \lnot Q \lor R)$
+
