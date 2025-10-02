@@ -3,13 +3,102 @@
 Dê uma prova formal, nas duas notações (tabelas e árvores), para cada uma das tautologias a seguir usando a regra CP.
 
 \noindent
-(a) $(A /lor B)$
+(a) $(A \;\lor B \rightarrow C) \;\land \; (C \rightarrow D \;\land E) \rightarrow (A \rightarrow D)$
 
 \subsubsection*{Tabela}
+\begin{flalign*}
+&1.\quad A \lor B \rightarrow C && \tag*{[Premissa]} &\\
+&2.\quad C \rightarrow D \land E && \tag*{[Premissa]} &\\
+&3.\quad\qquad A && \tag*{[Premissa (para $A\rightarrow D$)]} &\\
+&4.\quad\qquad A \lor B && \tag*{[3, Ad]} &\\
+&5.\quad\qquad C && \tag*{[1,4\; MP]} &\\
+&6.\quad\qquad D \land E && \tag*{[2,5\; MP]} &\\
+&7.\quad\qquad D && \tag*{[6, Simp]} &\\
+&8.\quad A \rightarrow D && \tag*{[3--7, PC]} &\\
+&9.\quad \text{QED} && \tag*{[1,2,8, PC]} &
+\end{flalign*}
+
 \subsubsection*{Árvore}
+
+\[
+\AxiomC{$A \vee B \to C$ (Suposição)}
+\AxiomC{$A$ (Suposição)}                       
+\UnaryInfC{$A \vee B$ (Adição)}    
+\BinaryInfC{$C$ (MP)}              
+\AxiomC{$C \to D \land E$}          
+\BinaryInfC{$D \land E$ (MP)}      
+\UnaryInfC{$D$ (Simplificação)}
+\UnaryInfC{$A \to D$ (PC1)}
+\UnaryInfC{$(A \vee B \to C) \land (C \to D \land E) \to (A \to D)$ (PC0)}
+\DisplayProof
+\]
 
 \noindent
-(b) $(A /lor B)$
+(b) $(A \rightarrow C) \rightarrow (A \rightarrow B \; \lor C)$
 
 \subsubsection*{Tabela}
+\begin{flalign*}
+&1.\quad A \rightarrow C && \tag*{[Premissa]} &\\
+&2.\quad\qquad A && \tag*{[Premissa (para $A \rightarrow B \lor C$)]} &\\
+&3.\quad\qquad C && \tag*{[1,2 MP]} &\\
+&4.\quad\qquad C \lor B && \tag*{[3, Ad]} &\\
+&5.\quad\qquad B \lor C && \tag*{[Exercício de sala]} &\\
+&6.\quad A \rightarrow (B \lor C) && \tag*{[2--5, PC]} &\\
+&7.\quad \text{QED} && \tag*{[1,6, PC]} &
+\end{flalign*}
+
 \subsubsection*{Árvore}
+
+\[
+\AxiomC{$A \to C$}                 
+\AxiomC{$A$ (Suposição)}                        
+\BinaryInfC{$C$ (MP)}               
+\AxiomC{$B$ (Suposição)}                        
+\BinaryInfC{$B \vee C$ (Casos)}     
+\UnaryInfC{$A \to (B \vee C)$ (PC1)}  
+\UnaryInfC{$(A \to C) \to (A \to (B \vee C))$ (PC0)} 
+\DisplayProof
+\]
+
+
+\noindent
+(c) $(A \rightarrow B) \rightarrow (C \lor A \rightarrow C \lor B)$
+
+\subsubsection*{Tabela}
+\begin{flalign*}
+&1.\quad A \rightarrow B && \tag*{[Premissa]} &\\
+&2. \quad \qquad C \lor A && \tag*{[Premissa (para $C \lor A \rightarrow C \lor B$]} \\
+&3. \quad \qquad \qquad A && \tag*{Premissa (para $A \rightarrow B \lor C$)} \\
+&4. \quad \qquad \qquad B && \tag*{[1,3. MP]} \\
+&5. \quad \qquad  B \lor C && \tag*{[4. Ad]} \\
+&6. \quad \qquad \qquad C \\
+&7. \quad \qquad \qquad C \lor B && \tag*{[6. Ad]} \\
+&8. \quad \qquad  B \lor C && \tag*{[Exercício de sala]} \\
+&9. \quad  C \lor A \rightarrow B \lor C && \tag*{[2-8. PC]} \\
+&10. \quad QED && \tag*{[1,9. PC]} 
+\end{flalign*}
+
+\subsubsection*{Árvore}
+% Caso 1: C
+\begin{prooftree}
+    \AxiomC{$C$ (Suposição)}
+    \UnaryInfC{$C \vee B$ (Adição)}
+\UnaryInfC{$C \vee A \to C \vee B$ (PC1)}
+\end{prooftree}
+
+% Caso 2: A
+\begin{prooftree}
+    \AxiomC{$A$ (Suposição)}
+    \AxiomC{$A \to B$}
+    \BinaryInfC{$B$ (MP)}
+    \UnaryInfC{$C \vee B$ (Adição)}
+\UnaryInfC{$C \vee A \to C \vee B$ (PC1)}
+\end{prooftree}
+
+% Conclusão
+\begin{prooftree}
+    \AxiomC{$A \to B$}
+    \AxiomC{$C \vee A$}
+    \BinaryInfC{$C \vee B$ (Casos)}
+    \UnaryInfC{$(A \to B) \to ((C \vee A) \to (C \vee B))$ (PC0)}
+\end{prooftree}

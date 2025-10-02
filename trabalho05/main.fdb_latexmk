@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1758923388.87682 "c:/Users/Alexandre Filho/Desktop/FMC3-Trabalhos/trabalho05/main.tex" "main.pdf" "main" 1758923389.92744 0
-  "C:/Users/Alexandre Filho/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1758922343 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+["pdflatex"] 1759362276.45446 "c:/Users/Alexandre Filho/Desktop/FMC3-Trabalhos/trabalho05/main.tex" "main.pdf" "main" 1759362290.64227 0
+  "C:/Users/Alexandre Filho/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1759362289 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Alexandre Filho/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1758921797 31952 7ab4cec0140df988cdbc3740bef3324e ""
   "C:/Users/Alexandre Filho/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1200.pk" 1758921799 28440 0dbcca4ebfc64048c8397696fba545de ""
   "C:/Users/Alexandre Filho/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecrm1440.pk" 1758921801 34320 69e05fd7f60085f5f21ecdc160a9f58f ""
@@ -75,6 +75,7 @@
   "C:/Users/Alexandre Filho/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty" 1749467999 5275 2f50a1b91fdc3c2c6ff41843a6854061 ""
   "C:/Users/Alexandre Filho/AppData/Local/Programs/MiKTeX/tex/latex/base/inputenc.sty" 1749467999 5048 0270515b828149155424600fd2d58ac5 ""
   "C:/Users/Alexandre Filho/AppData/Local/Programs/MiKTeX/tex/latex/base/size12.clo" 1749467999 8449 8dc66c6c313c8eb2d774af83bca435dd ""
+  "C:/Users/Alexandre Filho/AppData/Local/Programs/MiKTeX/tex/latex/bussproofs/bussproofs.sty" 1345467820 39833 dfb882c5505ae6cfb61e51a89a37de88 ""
   "C:/Users/Alexandre Filho/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1623003186 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "C:/Users/Alexandre Filho/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.sty" 1739279216 46850 d87daedc2abdc653769a6f1067849fe0 ""
   "C:/Users/Alexandre Filho/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.cfg" 1465894292 1224 978390e9c2234eab29404bc21b268d1e ""
@@ -97,10 +98,10 @@
   "C:/Users/Alexandre Filho/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/Alexandre Filho/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1751104012 9684 a33a14b82ce60d6e77cb9be689d79ee6 ""
   "C:/Users/Alexandre Filho/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/Alexandre Filho/Desktop/FMC3-Trabalhos/trabalho05/main.tex" 1758922688 490 ef2ea3073018079a61a4fc3a49b4a49e ""
-  "main.aux" 1758923389 299 22df542500a7af2f7c42b29800034bd4 "pdflatex"
-  "main.out" 1758923389 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1758922688 490 ef2ea3073018079a61a4fc3a49b4a49e ""
+  "c:/Users/Alexandre Filho/Desktop/FMC3-Trabalhos/trabalho05/main.tex" 1759362275 515 995f63ce3a62574b269986596370fd47 ""
+  "main.aux" 1759362290 299 22df542500a7af2f7c42b29800034bd4 "pdflatex"
+  "main.out" 1759362290 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1759362275 515 995f63ce3a62574b269986596370fd47 ""
   "parte1.tex" 1758923228 2821 631742209c7b7c0b9dc24153d88ce177 ""
   "parte2.tex" 1758923386 4041 58e21ce3f3857e1c5f57fa41adc904d9 ""
   "parte3.tex" 1758923386 1347 0b5d31ab8db7c47ddb1f1f9a8e70b66c ""
