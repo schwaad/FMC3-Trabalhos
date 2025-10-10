@@ -1,1 +1,25 @@
 \section*{2. $(A \lor B \rightarrow C) \land (C \rightarrow D \land E) \rightarrow (A \rightarrow C)$}
+
+
+\begin{flalign*}
+	 & 1. \quad (A \lor B \rightarrow C) \land (C \rightarrow D \land E)                                &  & [P]                                & \\
+	 & \qquad 2. \quad \lnot(A \rightarrow D)                                                           &  & [\text{Hipótese para PI}]          & \\
+	 & \qquad\qquad 3. \quad A \land \lnot D                                                            &  & [2, NC]                            & \\
+	 & \qquad\qquad 4. \quad A                                                                          &  & [3, Simp]                          & \\
+	 & \qquad\qquad 5. \quad \lnot D                                                                    &  & [3, Simp]                          & \\
+	 & \qquad\qquad 6. \quad A \lor B \rightarrow C                                                     &  & [1, Simp]                          & \\
+	 & \qquad\qquad 7. \quad C \rightarrow D \land E                                                    &  & [1, Simp]                          & \\
+	 & \qquad\qquad 8. \quad A \lor B                                                                   &  & [4, Ad]                            & \\
+	 & \qquad\qquad 9. \quad C                                                                          &  & [6, 8, MP]                         & \\
+	 & \qquad\qquad 10. \quad D \land E                                                                 &  & [7, 9, MP]                         & \\
+	 & \qquad\qquad 11. \quad D                                                                         &  & [10, Simp]                         & \\
+	 & \qquad\qquad 12. \quad D \land \lnot D                                                           &  & \text{Falso [5, 11 - Contradição]} & \\
+	 & \qquad 13. \quad A \rightarrow D                                                                 &  & [2-12, PI]                         & \\
+	 & 14. \quad (A \lor B \rightarrow C) \land (C \rightarrow D \land E) \rightarrow (A \rightarrow D) &  & [1-13, PC]                         &
+\end{flalign*}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=7cm]{minha_imagem.png}
+\end{figure}
+
