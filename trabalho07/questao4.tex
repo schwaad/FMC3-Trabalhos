@@ -1,1 +1,25 @@
-\section*{4. COPIE AQUI O ENUNCIADO!!!!!!!!!!}
+\section*{4. $(A\rightarrow C) \rightarrow(A\land B \rightarrow C). $}
+
+\begin{flalign*}
+&1.\quad A \rightarrow C && \tag*{[P]} &\\
+&2. \quad \qquad A \land B && \tag*{[P para [$A\land B \rightarrow C$]]} &\\
+&3. \quad \qquad \qquad \neg C && \tag*{[Para [C], por absurdo]}&\\
+&4. \quad \qquad \qquad A && \tag*{[2. Simplificação]} &\\
+&5. \quad \qquad \qquad C && \tag*{[1,4 - MP]} &\\
+&6. \quad \qquad \qquad Falso && \tag*{[3,5 - Contradição]} &\\
+&7. \quad \qquad C && \tag*{[3,6 - PI]} &\\
+&8. \quad A \land B \rightarrow C && \tag*{[2,7 - PC]} &\\
+& QED && \tag*{[1,8 - PC]}
+\end{flalign*}
+
+\begin{prooftree}
+\AxiomC{$[A \rightarrow C]^1$}
+\AxiomC{$[A \land B]^2$}
+\AxiomC{$[\neg C]^3$}
+\UnaryInfC{$A$}
+\BinaryInfC{$C$}
+\BinaryInfC{$\bot$}
+\UnaryInfC{$C$}
+\UnaryInfC{$A \land B \rightarrow C$}
+\UnaryInfC{$(A \rightarrow C) \rightarrow (A \land B \rightarrow C)$}
+\end{prooftree}

@@ -1,1 +1,35 @@
-\section*{3. COPIE AQUI O ENUNCIADO!!!!!!!!!!}
+\section*{3. $(A \rightarrow B) \rightarrow ((B \rightarrow C) \rightarrow (A\lor B \rightarrow C));$}
+
+\begin{flalign*}
+&1.\quad A \rightarrow B && \tag*{[P]} &\\
+&2. \quad \qquad B \rightarrow C \tag*{[P para [$(B \rightarrow C) \rightarrow(A \lor B \rightarrow C)$]]} &\\ 
+&3. \quad \qquad \qquad A \lor B && \tag*{[P [Para $A \lor B \rightarrow C$]]} &\\
+&4. \quad \qquad \qquad \qquad \neg C && \tag*{[P [Para C] por absurdo]} \\
+&5. \quad \qquad \qquad \qquad \neg B && \tag*{[2,4 - MT]} &\\
+&6. \quad \qquad \qquad \qquad \neg A && \tag*{[1,5 - MT]} &\\
+&7. \quad \qquad \qquad \qquad  A && \tag*{[3,5 - Proposição vista em sala]} &\\
+&8. \quad \qquad \qquad \qquad Falso \tag*{[6,7 - Contradição]}&\\
+&9. \quad \qquad \qquad C \tag*{[4-8 - PI]} &\\
+&10. \quad \qquad (A \lor B) \rightarrow C \tag*{[3,9 - PC]} &\\
+&11. \quad (B \rightarrow C) \rightarrow (A\lor B \rightarrow C) \tag*{[2,10 - PC]} &\\
+& \quad QED \tag*{[1,11 - PC]} &\\
+\end{flalign*}
+
+\begin{prooftree}
+\AxiomC{$[A \rightarrow B]^1$}
+\AxiomC{$[B \rightarrow C]^2$}
+\AxiomC{$[A \lor B]^3$}
+\AxiomC{$[\neg C]^4$}
+
+\UnaryInfC{$\neg B$} % MT: 2,4
+\BinaryInfC{$\neg A$} % MT: 1, passo anterior
+\BinaryInfC{$A$} % Silogismo Disjuntivo: (A v B, ¬B) => A
+\BinaryInfC{$\bot$} % Contradição
+\UnaryInfC{$C$} % Prova por absurdo
+\UnaryInfC{$(A \lor B) \rightarrow C$} % descarrega A v B
+\UnaryInfC{$(B \rightarrow C) \rightarrow (A \lor B \rightarrow C)$} % descarrega B->C
+\UnaryInfC{$(A \rightarrow B) \rightarrow ((B \rightarrow C) \rightarrow (A \lor B \rightarrow C))$} % descarrega A->B
+\end{prooftree}
+
+
+
