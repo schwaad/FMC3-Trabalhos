@@ -1,16 +1,12 @@
 \subsection*{iii. Digamos que já tenhamos provado os teoremas $A \rightarrow B$ e $B \rightarrow C$. Mostre que $A \rightarrow C$.} 
 
 \begin{flalign*}
-&1.\quad (B \rightarrow C) & P \\
-&2. \quad \qquad (A \land B) & P \\  
-&3. \quad \qquad \qquad \lnot(A \land C) & \text{P para $(A \land C)$ Prova por absurdo} \\
-&4. \quad \qquad \qquad \qquad B & 2, Simp \\
-&5. \quad \qquad \qquad \qquad C & 1, 4 MP \\
-&6. \quad \qquad \qquad \qquad A & 2, Simp \\
-&7. \quad \qquad \qquad \qquad  A \land C & 5,6 Conj.\\
-&8. \quad \qquad \qquad \qquad Falso & 3, 7 Contra.\\
-&9. \quad \qquad (A \land C) & 3-8, PI\\
-&10. \quad (A \land B \rightarrow A \land C) & 2, 9 PC\\
-& \quad QED & 1, 10 P
+&1.\quad (A \rightarrow B) & P \\
+&2.\quad (B \rightarrow C) & P \\ 
+&3.\quad (B \rightarrow C) \rightarrow (A \rightarrow (B \rightarrow C)) & A1 \\
+&4.\quad A \rightarrow (B \rightarrow C) & \text{2, 3, MP }\\
+&5.\quad (A \rightarrow (B \rightarrow C)) \rightarrow ((A \rightarrow B) \rightarrow (A \rightarrow C)) & A2 \\
+&6.\quad ((A \rightarrow B) \rightarrow (A \rightarrow C)) & \text{4, 5, MP }\\
+&7.\quad A \rightarrow C & \text{1, 6, MP} \\
+&8.\quad QED
 \end{flalign*}
-

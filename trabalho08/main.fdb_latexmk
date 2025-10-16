@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1760636866 "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho08/main.tex" "main.pdf" "main" 1760636866
+["pdflatex"] 1760639866 "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho08/main.tex" "main.pdf" "main" 1760639867
   "/etc/texmf/web2c/texmf.cnf" 1736472376 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1759109296 40112 570c176d8a2133e51d326b0eeb0bf3e5 ""
   "/home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk" 1758216528 28416 08622fefb27784caf97897db6846f38d ""
@@ -110,14 +110,14 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1757802242 165012 f177baa1c39a3ebd62c3096a43521a0d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1757802405 1436428 da213c2c537c237f732b2f1f48a8c466 ""
-  "main.aux" 1760636866 789 754162bb788961ee1d6ce3dffe5b8e08 "pdflatex"
-  "main.out" 1760636866 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1760639867 789 754162bb788961ee1d6ce3dffe5b8e08 "pdflatex"
+  "main.out" 1760639867 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1760636866 624 34946b9d94d81d3c8372fcfa18d374e1 ""
-  "questao1.tex" 1760636714 602 635f5b3ad61ca6e5654d651e461e98ee ""
-  "questao2.tex" 1760636716 625 6138b3a6aa0cc1e42b1a4b756a7f16da ""
-  "questao3.tex" 1760636718 700 5f523a5650f8a8501fb6aab17852bb45 ""
-  "questao4.tex" 1760636810 699 448ced709d9fdd88255397535467b9e2 ""
-  "questao5.tex" 1760636858 648 f6df33a2b40c720d912903eee489e6a3 ""
+  "questao1.tex" 1760639853 39 e0216b031bda8c1e916e6c91ab5106ee ""
+  "questao2.tex" 1760639866 625 6138b3a6aa0cc1e42b1a4b756a7f16da ""
+  "questao3.tex" 1760639847 630 0107a1f1d8c7b34bb446e5417b6498ac ""
+  "questao4.tex" 1760639809 1011 51e1fc71cfae5b4973a4e60786954685 ""
+  "questao5.tex" 1760639865 648 f6df33a2b40c720d912903eee489e6a3 ""
   (generated)
   "main.aux"
   "main.log"
