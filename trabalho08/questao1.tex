@@ -1,0 +1,16 @@
+\subsection*{i. $A \rightarrow A$} 
+
+\begin{flalign*}
+&1.\quad (B \rightarrow C) & P \\
+&2. \quad \qquad (A \land B) & P \\  
+&3. \quad \qquad \qquad \lnot(A \land C) & \text{P para $(A \land C)$ Prova por absurdo} \\
+&4. \quad \qquad \qquad \qquad B & 2, Simp \\
+&5. \quad \qquad \qquad \qquad C & 1, 4 MP \\
+&6. \quad \qquad \qquad \qquad A & 2, Simp \\
+&7. \quad \qquad \qquad \qquad  A \land C & 5,6 Conj.\\
+&8. \quad \qquad \qquad \qquad Falso & 3, 7 Contra.\\
+&9. \quad \qquad (A \land C) & 3-8, PI\\
+&10. \quad (A \land B \rightarrow A \land C) & 2, 9 PC\\
+& \quad QED & 1, 10 P
+\end{flalign*}
+
