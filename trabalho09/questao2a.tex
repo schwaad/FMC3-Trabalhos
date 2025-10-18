@@ -1,3 +1,13 @@
 \subsection*{2. Use equivalëncias para construir uma forma normal conjuntiva prenexa e uma forma disjuntiva prenexa para cada uma das seguintes fbfs.}
 
 \textbf{a) $\forall x (p(x) \lor q(x)) \rightarrow \forall x p(x) \lor \forall x q(x) $} \\
+\begin{align*}
+\forall x (p(x) \lor q(x)) \rightarrow \forall x p(x) \lor \forall x q(x) \equiv \\
+\forall x (p(x) \lor q(x)) \rightarrow \forall y p(y) \lor \forall z q(z) \equiv && \tag*{Renom.} \\
+\lnot \forall x (p(x) \lor q(x)) \lor \forall y p(y) \lor \forall z q(z) \equiv && \tag*{Rem. $\rightarrow$} \\
+\exists x \lnot (p(x) \lor q(x)) \lor \forall y p(y) \lor \forall z q(z) \equiv && \tag*{$\lnot \forall$} \\
+\exists x (\lnot p(x) \land \lnot q(x)) \lor \forall y p(y) \lor \forall z q(z) \equiv && \tag*{$\lnot (A \lor B) \equiv \lnot A \land \lnot B $} \\
+\exists x ((\lnot p(x) \land \lnot q(x)) \lor \forall y p(y) \lor \forall z q(z)) \equiv && \tag*{Adicionando ()} \\
+\exists x \forall y ((\lnot p(x) \land \lnot q(x)) \lor p(y) \lor \forall z q(z)) \equiv && \tag*{iv (b)} \\
+\exists x \forall y \forall z ((\lnot p(x) \land \lnot q(x)) \lor p(y) \lor q(z)) \equiv && \tag*{iv (b)} \\
+\end{align*}

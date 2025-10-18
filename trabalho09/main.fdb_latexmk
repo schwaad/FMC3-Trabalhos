@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1760815947 "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho09/main.tex" "main.pdf" "main" 1760815948
+["pdflatex"] 1760818688 "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho09/main.tex" "main.pdf" "main" 1760818688
   "/etc/texmf/web2c/texmf.cnf" 1736472376 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk" 1758216528 31928 dd33ba66f215ad2e087eaf2bedbdc037 ""
   "/home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1759109296 40112 570c176d8a2133e51d326b0eeb0bf3e5 ""
@@ -108,14 +108,14 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1757802242 165012 f177baa1c39a3ebd62c3096a43521a0d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1757802405 1436428 da213c2c537c237f732b2f1f48a8c466 ""
-  "main.aux" 1760815948 789 8863fc72ea0e88e23e6a3cb86b69a6ab "pdflatex"
-  "main.out" 1760815948 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1760818688 789 8863fc72ea0e88e23e6a3cb86b69a6ab "pdflatex"
+  "main.out" 1760818688 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1760815332 629 35856671c83528f82af3ee871e545be0 ""
   "questao1a.tex" 1760815530 186 6a6cf21f133c3df696ccff9d9c27ea00 ""
   "questao1b.tex" 1760815589 100 0120818db999f10e1a17b99d95fefdb6 ""
-  "questao2a.tex" 1760815877 244 5e326db776d06f5838e6d92572f9dc8a ""
+  "questao2a.tex" 1760818687 1162 bead8bbb03693c35a4ac9ef6ca0fcf65 ""
   "questao2b.tex" 1760815926 90 b5d31f786ff094540681b64b4b01b76b ""
-  "questao2c.tex" 1760815947 2 e1c06d85ae7b8b032bef47e42e4c08f9 ""
+  "questao2c.tex" 1760818118 2 e1c06d85ae7b8b032bef47e42e4c08f9 ""
   (generated)
   "main.aux"
   "main.log"
