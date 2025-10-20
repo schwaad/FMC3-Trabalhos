@@ -11,3 +11,11 @@
 \exists x \forall y ((\lnot p(x) \land \lnot q(x)) \lor p(y) \lor \forall z q(z)) \equiv \\
 \exists x \forall y \forall z ((\lnot p(x) \land \lnot q(x)) \lor p(y) \lor q(z)) \equiv \\
 \end{align*}
+
+A fbf que encontramos já está na forma normal disjuntiva prenexa.
+Agora, encontraremos a forma normal conjuntiva prenexa.
+
+\begin{align*}
+\exists x \forall y \forall z ((\lnot p(x) \land \lnot q(x)) \lor p(y) \lor q(z)) \equiv \\
+\exists x \forall y \forall z (\lnot p(x) \lor p(y) \lor q(z)) \land (\lnot q(x) \lor p(y) \lor q(z))
+\end{align*}
