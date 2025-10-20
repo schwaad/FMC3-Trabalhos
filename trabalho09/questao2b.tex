@@ -1,1 +1,12 @@
 \textbf{b) $\exists x p(x) \land \exists x q(x) \rightarrow \exists x (p(x) \land q(x)) $}
+
+\begin{align*}
+\exists x p(x) \land \exists y q(y) \rightarrow \exists x (p(x) \land p(x))\\
+\exists x p(x) \land \exists y q(y) \rightarrow \exists z (p(z) \land p(z)) && \tag*{Renom.} \\
+\lnot (\exists p (x) \land \exists y q(y)) \lor \exists z (p(z) \land q(z)) && \tag*{Rem. $\rightarrow$}  \\
+\lnot \exists p (x) \lor \lnot \exists y q(y) \lor \exists z (p(z) \land q(z)) \\
+\forall x \lnot p (x) \lor \forall y \lnot y q(y) \lor \exists z (p(z) \land q(z)) \\
+\forall x (\lnot p (x) \lor \forall y \lnot y q(y) \lor \exists z (p(z) \land q(z))) \\
+\forall x (\lnot p (x) \lor \lnot y q(y) \lor \exists z (p(z) \land q(z))) \\
+\forall x \forall y \exists z (\lnot p (x) \lor \forall y \lnot y q(y) \lor (p(z) \land q(z)))
+\end{align*}
