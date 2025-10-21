@@ -1,20 +1,20 @@
 \textbf{b) $\exists x p(x) \land \exists x q(x) \rightarrow \exists x (p(x) \land q(x)) $}
 
 \begin{align*}
-\exists x p(x) \land \exists y q(y) \rightarrow \exists x (p(x) \land p(x)) \equiv \\
-\exists x p(x) \land \exists y q(y) \rightarrow \exists z (p(z) \land p(z)) \equiv && \tag*{Renom.}   \\
-\lnot (\exists p (x) \land \exists y q(y)) \lor \exists z (p(z) \land q(z))  \equiv  && \tag*{Rem. $\rightarrow$}\\
-\lnot \exists p (x) \lor \lnot \exists y q(y) \lor \exists z (p(z) \land q(z)) \equiv  \\
-\forall x \lnot p (x) \lor \forall y \lnot y q(y) \lor \exists z (p(z) \land q(z)) \equiv  \\
-\forall x (\lnot p (x) \lor \forall y \lnot y q(y) \lor \exists z (p(z) \land q(z))) \equiv  \\
-\forall x (\lnot p (x) \lor \lnot y q(y) \lor \exists z (p(z) \land q(z)))  \equiv \\
-\forall x \forall y \exists z (\lnot p (x) \lor \lnot q(y) \lor (p(z) \land q(z)))
+	\exists x p(x) \land \exists y q(y) \rightarrow \exists x (p(x) \land p(x)) \equiv                                 \\
+	\exists x p(x) \land \exists y q(y) \rightarrow \exists z (p(z) \land p(z)) \equiv  &  & \tag*{Renom.}             \\
+	\lnot (\exists p (x) \land \exists y q(y)) \lor \exists z (p(z) \land q(z))  \equiv &  & \tag*{Rem. $\rightarrow$} \\
+	\lnot \exists p (x) \lor \lnot \exists y q(y) \lor \exists z (p(z) \land q(z)) \equiv                              \\
+	\forall x \lnot p (x) \lor \forall y \lnot y q(y) \lor \exists z (p(z) \land q(z)) \equiv                          \\
+	\forall x (\lnot p (x) \lor \forall y \lnot y q(y) \lor \exists z (p(z) \land q(z))) \equiv                        \\
+	\forall x (\lnot p (x) \lor \lnot y q(y) \lor \exists z (p(z) \land q(z)))  \equiv                                 \\
+	\forall x \forall y \exists z (\lnot p (x) \lor \lnot q(y) \lor (p(z) \land q(z)))
 \end{align*}
 
 A fbf que encontramos já está na forma normal disjuntiva prenexa.
 Agora, encontraremos a forma normal conjuntiva prenexa.
 
 \begin{align*}
-\forall x \forall y \exists z (\lnot p (x) \lor \lnot q(y) \lor (p(z) \land q(z))) \equiv \\
-\forall x \forall y \exists z ((\lnot p(x) \lor \lnot q(y) \lor p(z)) \land (\lnot p(x) \lor \lnot q(y) \lor q(z)))
+	\forall x \forall y \exists z (\lnot p (x) \lor \lnot q(y) \lor (p(z) \land q(z))) \equiv \\
+	\forall x \forall y \exists z ((\lnot p(x) \lor \lnot q(y) \lor p(z)) \land (\lnot p(x) \lor \lnot q(y) \lor q(z)))
 \end{align*}

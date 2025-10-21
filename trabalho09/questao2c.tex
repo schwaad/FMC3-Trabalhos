@@ -1,2 +1,17 @@
+\subsection*{c) $\forall x, \exists y, p(x,y) \rightarrow \exists y, \forall x,, p(x,y)$}
+
+\begin{flalign*}
+	 & \forall x, \exists y, p(x,y) \rightarrow \exists y, \forall x, p(x,y) \equiv                                                      \\
+	 & \forall x, \exists y, p(x,y) \rightarrow \exists w, \forall z, p(w,z) \equiv & [\text{Renom.}]                                    \\
+	 & \lnot \forall x, \exists y, p(x,y) \lor \exists w, \forall z, p(w,z) \equiv  & [\text{Remove } \rightarrow]                       \\
+	 & \exists x, \lnot \exists y, p(x,y) \lor \exists w, \forall z, p(w,z) \equiv  & [(\lnot \forall x \ W) \equiv \exists x \ \lnot W] \\
+	 & \exists x, \forall y, \lnot p(x,y) \lor \exists w, \forall z, p(w,z) \equiv  & [\lnot \exists y \ W \equiv \forall y \ \lnot W]   \\
+	 & \exists x, \forall y (\lnot p(x,y) \lor \exists w, \forall z, p(w,z) \equiv  & [\text{Move } \forall y]                           \\
+	 & \exists x, \forall y, \exists w, \forall z (\lnot p(x,y) \lor p(w,z))        & [\text{Move } \exists w \text{ e } \forall z]
+\end{flalign*}
+
+A forma que encontramos está tanto na forma normal disjuntiva prenexa quanto na forma normal conjuntiva prenexa.
+
+
 
 
