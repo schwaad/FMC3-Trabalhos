@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1761335283.16136 "c:/Users/Alexandre Filho/Desktop/FMC3-Trabalhos/trabalho09/main.tex" "main.pdf" "main" 1761335284.20003 0
+["pdflatex"] 1761335632.77477 "c:/Users/Alexandre Filho/Desktop/FMC3-Trabalhos/trabalho09/main.tex" "main.pdf" "main" 1761335633.95939 0
   "C:/Users/Alexandre Filho/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1759362289 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Alexandre Filho/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1200.pk" 1758921797 31952 7ab4cec0140df988cdbc3740bef3324e ""
   "C:/Users/Alexandre Filho/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx1440.pk" 1759362095 40136 b9d914f7860d3f357efc1db42aa26ccc ""
@@ -105,10 +105,10 @@
   "C:/Users/Alexandre Filho/AppData/Local/Programs/MiKTeX/tex/latex/tools/verbatim.sty" 1749468414 7532 26d26e9d8f2ca784270d5da8ec7d102b ""
   "C:/Users/Alexandre Filho/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "c:/Users/Alexandre Filho/Desktop/FMC3-Trabalhos/trabalho09/main.tex" 1761317106 661 35856671c83528f82af3ee871e545be0 ""
-  "main.aux" 1761335283 303 ff10c5c1799f240611fe6910b4cb7503 "pdflatex"
-  "main.out" 1761335283 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1761335633 303 ff10c5c1799f240611fe6910b4cb7503 "pdflatex"
+  "main.out" 1761335633 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1761317106 661 35856671c83528f82af3ee871e545be0 ""
-  "questao1a.tex" 1761335255 1161 22dd01a39081bd96e0f5b75ba629e990 ""
+  "questao1a.tex" 1761335631 1162 729821e505b100eb456a8ab963ebe5b1 ""
   "questao1b.tex" 1761335282 1226 8749bed74fb45f7ffdcf3bdb3ee3bf43 ""
   "questao2a.tex" 1761317106 1473 a87327e6f02430627ca07d5aabcd7edd ""
   "questao2b.tex" 1761317106 1422 21b98a6e77e4b0be55b81c0b23355475 ""
