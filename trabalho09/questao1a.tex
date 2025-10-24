@@ -1,4 +1,21 @@
 \subsection*{1. Prove (usando argumentos de validade [interpretações e modelos/contramodelos]) que:}
 
 \textbf{a. Uma fbf é válida se e somente se o seu fecho universal for válido}
-
+\textbf{($\implies$)}
+\\
+Seja W uma fbf válida e I uma interpretação qualquer. 
+\begin{align*}
+    W \text{ válida} 
+    &\Longleftrightarrow \forall I, I  \models W \tag*{(Def. Val.)} \\
+    &\implies \forall a_1,...,a_n,I[x_1\rightarrow a_1,...,x_n \rightarrow a_n] \models W \tag*{(Semântica $\forall x)$} \\
+    &\Longleftrightarrow \forall I, I \models \forall x_1 ... \forall x_n W \tag*{(Def. fecho universal)} \\
+    &\implies \text{Fecho universal válido}
+\end{align*}
+\textbf{($\impliedby$)}
+\\
+Seja W uma fbf qualquer e seja $\forall xW$ o seu fecho universal, que é válido. Além disso, seja I uma interpretação qualquer. 
+\begin{align*}
+    \forall x W  \text{ válido} &\Longleftrightarrow \forall a_1,...,a_n,I[x_1\rightarrow a_1,...,x_n \rightarrow a_n] \models W \tag*{(Def.)} \\
+    &\implies \forall I, I \models W \tag*{(Semântica $\forall x$)}\\
+    &\Longleftrightarrow W \text{é válido} \tag*{(Def. Val.)}
+\end{align*}

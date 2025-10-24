@@ -1,2 +1,20 @@
 \textbf{b. Uma fbf é insatisfatória se e somente se o seu fecho existencial for insatisfatório}
-
+\textbf{($\implies$)}
+\\
+Seja $W$ uma fbf insatisfatória e I uma interpretação qualquer.
+\begin{align*}
+    W \text{ insatisfatória} 
+    &\Longleftrightarrow \not\exists I, I \models W \tag*{(Def. Insatisfatório)} \\
+    &\implies \not \exists a_1,...,a_n \text{ tal que } I[x_1 \rightarrow a_1,...,x_n \rightarrow a_n] \models W \tag*{($\not\exists$)} \\
+    &\Longleftrightarrow \not\exists I, I \models \exists x_1 \;... \exists x_nW \tag*{(Def. fecho existencial)} \\
+    &\implies \text{Fecho existencial insatisfatório}
+\end{align*}
+\textbf{($\impliedby$)}
+\\
+Seja W uma fbf qualquer e seja $\exists x W$ o seu fecho existencial, que é insatisfatório. Além disso, seja I uma interpretação qualquer.
+\begin{align*}
+     \exists x W\text{ insatisfatório} 
+    &\Longleftrightarrow \not\exists I, I \models \exists x_1 ... \exists x_nW \tag*{(Def. insatisfatório)} \\
+    &\implies \not\exists a_1,... , a_n  \text{ tal que }I[x_1\rightarrow a_1,...,x_n \rightarrow a_n] \tag*{($\not\exists$)} \\
+    &\Longleftrightarrow \text{W insatisfatória} \tag*{(Def. insatisfatório)}
+\end{align*}
