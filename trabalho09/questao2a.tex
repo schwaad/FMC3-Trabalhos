@@ -7,7 +7,15 @@
 \lnot \forall x (p(x) \lor q(x)) \lor \forall y p(y) \lor \forall z q(z) \equiv && \tag*{Rem. $\rightarrow$} \\
 \exists x \lnot (p(x) \lor q(x)) \lor \forall y p(y) \lor \forall z q(z) \equiv && \tag*{$\lnot \forall$} \\
 \exists x (\lnot p(x) \land \lnot q(x)) \lor \forall y p(y) \lor \forall z q(z) \equiv && \tag*{$\lnot (A \lor B) \equiv \lnot A \land \lnot B $} \\
-\exists x ((\lnot p(x) \land \lnot q(x)) \lor \forall y p(y) \lor \forall z q(z)) \equiv && \tag*{Adicionando ()} \\
-\exists x \forall y ((\lnot p(x) \land \lnot q(x)) \lor p(y) \lor \forall z q(z)) \equiv && \tag*{iv (b)} \\
-\exists x \forall y \forall z ((\lnot p(x) \land \lnot q(x)) \lor p(y) \lor q(z)) \equiv && \tag*{iv (b)} \\
+\exists x ((\lnot p(x) \land \lnot q(x)) \lor \forall y p(y) \lor \forall z q(z)) \equiv \\
+\exists x \forall y ((\lnot p(x) \land \lnot q(x)) \lor p(y) \lor \forall z q(z)) \equiv \\
+\exists x \forall y \forall z ((\lnot p(x) \land \lnot q(x)) \lor p(y) \lor q(z)) \equiv \\
+\end{align*}
+
+A fbf que encontramos já está na forma normal disjuntiva prenexa.
+Agora, encontraremos a forma normal conjuntiva prenexa.
+
+\begin{align*}
+\exists x \forall y \forall z ((\lnot p(x) \land \lnot q(x)) \lor p(y) \lor q(z)) \equiv \\
+\exists x \forall y \forall z (\lnot p(x) \lor p(y) \lor q(z)) \land (\lnot q(x) \lor p(y) \lor q(z))
 \end{align*}
