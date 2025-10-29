@@ -1,14 +1,19 @@
-\subsection*{1. Dê uma prova formal de $A \rightarrow B$, em que A e B são definidos como segue:}
+\subsection*{1. Dê uma prova formal de $A \rightarrow B$, em que $A$ e $B$ são definidos como segue:}
 
-$A = \exists x (r(x) \land \forall y (p(y) \rightarrow q(x, y))) \land \forall x (r(x) \rightarrow \forall y (s(y) \rightarrow \lnot q(x,y)))$\\
-
-$B = \forall x (p(x) \rightarrow \lnot s(x))$
+\[
+\begin{aligned}
+A &= \exists x \big(r(x) \land \forall y \big(p(y) \rightarrow q(x, y)\big)\big) 
+   \;\land\;
+   \forall x \big(r(x) \rightarrow \forall y \big(s(y) \rightarrow \lnot q(x,y)\big)\big) \\[8pt]
+B &= \forall x \big(p(x) \rightarrow \lnot s(x)\big)
+\end{aligned}
+\]
 
 \begin{flalign*}
 	 & 1. \exists x (r(x) \land \forall y (p(y) \rightarrow q(x, y))) &  & \text{P}\\
 	 & 2. \forall x (r(x) \rightarrow \forall y (s(y) \rightarrow \lnot q(x,y))) &  & \text{P}\\
 	 & 3. r(c) \land \forall y (p(y) \rightarrow q(c, y)) &  & \text{1, IE}\\
-     & 4. \forall y (p(y) \rightarrow q(c,y)) & & \text{3, Simp. CONFERIR} \\
+     & 4. \forall y (p(y) \rightarrow q(c,y)) & & \text{3, Simp.} \\
      & 5. p(y) \rightarrow q(c,y) & & \text{4, IU} \\
      & 6. r(c) \rightarrow \forall y (s(y) \rightarrow \lnot q(c,y)) & & \text{2, IU} \\
      & 7. ----- r(c) & & \text{P} \\
