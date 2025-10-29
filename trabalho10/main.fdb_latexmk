@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1761743945 "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho10/main.tex" "main.pdf" "main" 1761743945
+["pdflatex"] 1761744316 "/home/marina/Documents/2025_2_FMC3/FMC3-Trabalhos/trabalho10/main.tex" "main.pdf" "main" 1761744316
   "/etc/texmf/web2c/texmf.cnf" 1736472376 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk" 1759109296 40112 570c176d8a2133e51d326b0eeb0bf3e5 ""
   "/home/marina/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk" 1758216528 28416 08622fefb27784caf97897db6846f38d ""
@@ -16,8 +16,10 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1246382020 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -109,10 +111,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1757802242 165012 f177baa1c39a3ebd62c3096a43521a0d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1757802405 1436428 da213c2c537c237f732b2f1f48a8c466 ""
-  "main.aux" 1761743945 789 754162bb788961ee1d6ce3dffe5b8e08 "pdflatex"
-  "main.out" 1761743945 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1761744316 789 754162bb788961ee1d6ce3dffe5b8e08 "pdflatex"
+  "main.out" 1761744316 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1761612454 624 34946b9d94d81d3c8372fcfa18d374e1 ""
-  "questao1.tex" 1761743945 1529 b9f0a369e1512370bdff7bcf7c0dd49f ""
+  "questao1.tex" 1761744316 1659 57fd263dcbfa317fc5e5c61f6e26c13f ""
   "questao2.tex" 1761612583 133 ea60929f2be7ab61735cb43ebb0dc40f ""
   "questao3.tex" 1761612660 225 23d77ec321a42a62a73ec0b85457b6eb ""
   "questao4.tex" 1761612706 76 894d4c4dd79195f41b55896e6ef77c6a ""
