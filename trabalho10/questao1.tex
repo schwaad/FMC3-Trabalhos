@@ -1,3 +1,27 @@
-\subsection*{1. Dê uma prova formal de $A \implies B$, em que A e B são definidos como segue:}
+\subsection*{1. Dê uma prova formal de $A \rightarrow B$, em que A e B são definidos como segue:}
 
-COMPLETAR ENUNCIADO
+$A = \exists x (r(x) \land \forall y (p(y) \rightarrow q(x, y))) \land \forall x (r(x) \rightarrow \forall y (s(y) \rightarrow \lnot q(x,y)))$\\
+
+$B = \forall x (p(x) \rightarrow \lnot s(x))$
+
+\begin{flalign*}
+	 & 1. \exists x (r(x) \land \forall y (p(y) \rightarrow q(x, y))) &  & \text{P}\\
+	 & 2. \forall x (r(x) \rightarrow \forall y (s(y) \rightarrow \lnot q(x,y))) &  & \text{P}\\
+	 & 3. r(c) \land \forall y (p(y) \rightarrow q(c, y)) &  & \text{1, IE}\\
+     & 4. \forall y (p(y) \rightarrow q(c,y)) & & \text{3, Simp. CONFERIR} \\
+     & 5. p(y) \rightarrow q(c,y) & & \text{4, IU} \\
+     & 6. r(c) \rightarrow \forall y (s(y) \rightarrow \lnot q(c,y)) & & \text{2, IU} \\
+     & 7. ----- r(c) & & \text{P} \\
+     & 8. \forall y (s(y) \rightarrow \lnot q(c,y)) & & \text{6, 7 MP} \\
+     & 9. s(y) \rightarrow \lnot q(c,y) & & \text{8, IU} \\
+     & 10. ----- p(y) & & \text{P} \\
+     & 11. q(c, y) & & \text{5, 10, MP} \\
+     & 12. ----- s(y) & & \text {P} \\
+     & 13. ----- \lnot q(c, y) & & \text {9, 12, MP} \\
+     & 14. ----- Falso & & \text {11, 13, Contr.} \\
+     & 15. \lnot s(y) & & {12 - 14, PI} \\
+     & 16. p(y) \rightarrow \lnot s(y) & & {10-15, PC}\\
+     & 17. \forall y (p(y) \rightarrow \lnot s(y)) & & {10-15, PC}\\
+     & 18. \forall x (p(x) \rightarrow \lnot s(x)) & & {17, Subs}\\
+     QED
+\end{flalign*}
