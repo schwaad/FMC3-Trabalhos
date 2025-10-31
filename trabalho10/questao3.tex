@@ -1,3 +1,22 @@
-\subsection*{3. Uma relação arbitrária que é irreflexiva e transitiva também é simétrica. Dê uma prova formal da afirmação, considerando que as seguintes fbf representam as três propriedades:}
-
-COPIAR PROPRIEDADES 
+\subsection*{3. Uma relação arbitrária que é irreflexiva e transitiva também é assimétrica. Dê uma prova
+	formal da afirmação, considerando que as seguintes fbf representam as três propriedades:}
+\begin{align}
+	\text{Irreflexiva: } & \forall x \ \lnot p(x, x)                                                   \\
+	\text{Transitiva: }  & \forall x, \forall y, \forall z, \ (p(x,y) \land p(y,z) \rightarrow p(x,z)) \\
+	\text{Assimétrica: } & \forall x, \forall y, \ (p(x, y) \rightarrow \lnot p(y,x))
+\end{align}
+\begin{flalign*}
+	 & 1. \quad \forall x \ \lnot p(x, x)                                                    &  & \text{P (Irreflexiva)}                       \\
+	 & 2. \quad \forall x \forall y \forall z \ ( (p(x,y) \land p(y,z)) \rightarrow p(x,z) ) &  & \text{P (Transitiva)}                        \\
+	 & 3. \quad \quad p(a,b)                                                                 &  & \text{Suposição (para PC), a, b arbitrários} \\
+	 & 4. \quad \quad \qquad p(b,a)                                                          &  & \text{Suposição (para PI)}                   \\
+	 & 5. \quad \quad \qquad p(a,b) \land p(b,a)                                             &  & \text{3, 4, Adj.}                            \\
+	 & 6. \quad \quad \qquad (p(a,b) \land p(b,a)) \rightarrow p(a,a)                        &  & \text{2, IU (x=a, y=b, z=a)}                 \\
+	 & 7. \quad \quad \qquad p(a,a)                                                          &  & \text{5, 6, MP}                              \\
+	 & 8. \quad \quad \qquad \lnot p(a,a)                                                    &  & \text{1, IU (x=a)}                           \\
+	 & 9. \quad \quad \qquad p(a,a) \land \lnot p(a,a)                                       &  & \text{7, 8, Adj. (Contradição)}              \\
+	 & 10. \quad \quad \lnot p(b,a)                                                          &  & \text{4-9, PI}                               \\
+	 & 11. \quad p(a,b) \rightarrow \lnot p(b,a)                                             &  & \text{3-10, PC}                              \\
+	 & 12. \quad \forall x \forall y \ ( p(x, y) \rightarrow \lnot p(y,x) )                  &  & \text{11, GU (pois a, b são arbitrários)}    \\
+	 & QED                                                                                   &  &
+\end{flalign*}
