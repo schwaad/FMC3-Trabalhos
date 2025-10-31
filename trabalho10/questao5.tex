@@ -1,3 +1,45 @@
 \subsection*{5. Prove formalmente que:}
-
-COPIAR O RESTO  
+$\exists x (A(x) \land\forall y(A(y) \rightarrow (x \equiv y))) \equiv \exists  x A(x) \land \forall x \forall y(A(x) \land A(y) \rightarrow (x = y))$
+\\
+\textbf{($\implies$)}
+\begin{flalign*}
+&1. \exists x(A(x) \land \forall y(A(y) \rightarrow (x = y))) \tag*{P} \\
+&2. A(c) \land \forall y(A(y) \rightarrow (c = y)) \tag*{1, IE} \\
+&3. A(c) \tag*{2,Simp} \\
+&4. \exists x A(x) \tag*{3, GE} \\
+&5. \forall y (A(y) \rightarrow (c = y)) \tag*{2, Simp} \\
+&6. \qquad A(u) \land A(v) \tag*{P (Subprova para $A(u) \land A(v) \rightarrow u = v$)} \\
+&7. \qquad A(u) \tag*{6,Simp} \\
+&8. \qquad A(v) \tag*{6,Simp} \\
+&9. \qquad A(u) \rightarrow (c = u) \tag*{5, IU} \\
+&10. \qquad A(v) \rightarrow (c = v) \tag*{5, IU} \\
+&11. \qquad c = u \tag*{7,9,MP} \\
+&12. \qquad c = v \tag*{8,10, MP} \\
+&13. \qquad u = c \tag*{11, Simetria} \\ 
+&14. \qquad u = v \tag*{12,13, Transitividade} \\ 
+&15. A(u) \land A(v) \rightarrow u = v \tag*{6-14, PC} \\
+&16. \forall y (A(u) \land A(y) \rightarrow u = y) \tag*{15, GU} \\ 
+&17. \forall x \forall y (A(x) \land A(y) \rightarrow x = y) \tag*{16,GU} \\
+&18. \exists x A(x) \land \forall x \forall y(A(x) \land A(y) \rightarrow x = y) \tag*{4,17, Conj} \\
+&19. \exists x (A(x) \land \forall y (A(y) \rightarrow (x = y))) \rightarrow(\exists x A(x) \land \forall x \forall y (A(x) \land A(y) \rightarrow(x = y))) \tag*{1-18,PC} \\
+&QED 
+\end{flalign*}
+\\
+\textbf{($\impliedby$)}
+\begin{flalign*}
+&1. \exists x A(x) \land \forall x \forall y (A(x) \land A(y) \rightarrow(x = y)) \tag*{P} \\
+&2. \exists x A(x) \tag*{1,Simp} \\
+&3. \forall x \forall y (A(x) \land A(y) \rightarrow (x = y)) \tag*{1, Simp} \\
+&4. A(c) \tag*{2, IE} \\
+&5. \qquad A(d) \tag*{P (para $A(d) \rightarrow c = d$)} \\
+&6. \qquad \forall y (A(c) \land A(y) \rightarrow c = y) \tag*{3,IU} \\
+&7. \qquad A(c) \land A(d) \rightarrow c = d \tag*{6,IU} \\
+&8. \qquad A(c) \land A(d) \tag*{4,5 Conj} \\
+&9. \qquad c = d \tag*{7,8, MP} \\
+&10. A(d) \rightarrow c = d \tag*{5-9, PC} \\
+&11. \forall y (A(y) \rightarrow c = y) \tag*{10, GU} \\
+&12. A(c) \land \forall y (A(y) \rightarrow c = y) \tag*{4,11,Conj} \\
+&13. \exists x (A(x) \land \forall y (A(y) \rightarrow x = y)) \tag*{12, GE} \\
+&14. ( \exists x A(x) \land \forall x \forall y (A(x) \land A(y) \rightarrow (x = y))) \rightarrow \exists x (A(x) \land \forall y (A(y) \rightarrow (x = y))) \tag*{1-13, PC} \\
+&QED
+\end{flalign*}

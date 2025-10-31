@@ -1,1 +1,58 @@
 \subsection*{4. Prove o Teorema da Dedução para o cálculo de predicado.}
+O Teorema da Dedução pode ser definido da seguinte forma:
+$$\text{Se } \Gamma, A \vdash B \text{, então } \Gamma \vdash A \rightarrow B$$
+Para provar, façamos uma prova por indução sob o comprimento $n$ do cálculo lógico. 
+\\
+\textbf{1. Caso Base ($n=1$)}
+\\
+No caso base, $B$ é a primeira linha da prova de $\Gamma, A \vdash B$. Há duas possibilidades: \\
+1. $B \in \Gamma$ \\
+2. $B$ é a premissa $A$. \\
+Façamos uma demonstração por casos: \\
+\\
+\textbf{Caso 1: $B \in \Gamma$ (ou $B$ é um Axioma)}
+\begin{flalign*}
+&1. \Gamma \vdash B \tag*{P}\\
+&2. \Gamma \vdash B \rightarrow (A \rightarrow B) \tag*{Axioma} \\
+&3. \Gamma \vdash A \rightarrow B \tag*{1, 2, MP} \\
+&QED
+\end{flalign*}
+
+\textbf{Caso 2: $B$ é a premissa $A$}
+\begin{flalign*}
+&1. \Gamma \vdash A \rightarrow A \tag*{Tautologia} \\
+&2. \Gamma \vdash A \rightarrow B \tag*{B = A} \\
+&QED 
+\end{flalign*}
+Com isso, tem-se que a base é válida.
+\\
+\textbf{2. Passo Indutivo} \\
+Hipótese indutiva: O teorema é válido para todo $k < n$ \\
+Novamente, temos duas possibilidades sobre como $B$ foi derivado: \\
+1. Modus Ponens ($\text{MP}$). \\
+2. Generalização Universal ($\text{GU}$). \\
+Novamente, façamos uma demonstração por casos: \\
+
+\textbf{Modus Ponens} \\
+$B$ é derivada de $C$ e $C \rightarrow B$ por $\text{MP}$.
+\begin{flalign*}
+&1. \Gamma \vdash A \rightarrow C \tag*{HI} \\
+&2. \Gamma \vdash A \rightarrow (C \rightarrow B) \tag*{HI} \\
+&3. \Gamma \vdash (A \rightarrow (C \rightarrow B)) \rightarrow ((A \rightarrow C) \rightarrow (A \rightarrow B)) \tag*{Axioma} \\
+&4. \Gamma \vdash (A \rightarrow C) \rightarrow (A \rightarrow B) \tag*{2, 3, MP} \\
+&5. \Gamma \vdash A \rightarrow B \tag*{1, 4, MP} \\
+&QED
+\end{flalign*}
+
+\textbf{Generalização Universal} \\
+$B = \forall x C$ é derivada de $C$ por $\text{GU}$ (assumindo que $x$ não é livre em $A$ ou em $\Gamma$). A dedução de $C$ a partir de $\Gamma, A$ tem comprimento $< n$.
+\begin{flalign*}
+&1. \Gamma \vdash A \rightarrow C \tag*{HI} \\
+&2. \Gamma \vdash \forall x (A \rightarrow C) \tag*{1, GU} \\
+&3. \Gamma \vdash \forall x (A \rightarrow C) \rightarrow (A \rightarrow \forall x C) \tag*{Axioma} \\
+&4. \Gamma \vdash A \rightarrow \forall x C \tag*{2, 3, MP} \\
+&5. \Gamma \vdash A \rightarrow B \tag*{4, Substituição ($B = \forall x C$)} \\
+&QED 
+\end{flalign*}
+
+Assim, prova-se o teorema da dedução.
