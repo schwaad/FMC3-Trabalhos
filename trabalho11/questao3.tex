@@ -13,3 +13,103 @@ $\{(a > 0) \land (b > 0)\}$
 	\State $max := x$
 \end{algorithmic}
 $\{max = \operatorname{mdc}(a,b)\}$
+\vspace{0.5cm}
+
+Provarei que a fbf está totalmente correta usando o **Invariante de Laço ($I$):**
+\[ I \equiv (\operatorname{mdc}(x,y) = \operatorname{mdc}(a,b)) \land (x > 0) \land (y > 0) \]
+e a **Função Variante ($t$):** $t = x + y$.
+
+\vspace{0.5cm}
+
+\subsection*{I. Inicialização (Antes do laço)}
+
+Devemos provar que a pré-condição implica o invariante após as atribuições iniciais.
+
+\begin{flalign*}
+	 & 1. \quad \{(\operatorname{mdc}(a,b) = \operatorname{mdc}(a,b)) \land (a > 0) \land (b > 0)\} \ x:=a; y:=b \ \{I\}      & \text{AA (múltiplo)}    \\
+	 & 2. \quad a > 0 \land b > 0                                                                                             & \text{Pré-condição (P)} \\
+	 & 3. \quad \operatorname{mdc}(a,b) = \operatorname{mdc}(a,b)                                                             & \text{Reflexividade}    \\
+	 & 4. \quad (a > 0 \land b > 0) \rightarrow ((\operatorname{mdc}(a,b) = \operatorname{mdc}(a,b)) \land a > 0 \land b > 0) & 2, 3, \text{Lógica}     \\
+	 & 5. \quad \{a > 0 \land b > 0\} \ x:=a; y:=b \ \{I\}                                                                    & 1, 4, \text{Conseq}
+\end{flalign*}
+
+\vspace{0.5cm}
+
+\subsection*{II. Manutenção (Durante a execução do laço)}
+
+Devemos provar que $\{I \land B\} \text{ Corpo } \{I\}$. O corpo possui um condicional.
+Seja $M = \operatorname{mdc}(a,b)$. O invariante é $mdc(x,y)=M \land x,y > 0$. A guarda é $x \neq y$.
+
+\noindent \textbf{Caso A: Se $(x > y)$ é verdadeiro (Ramo 'If')}
+\begin{flalign*}
+	 & 6. \quad \{(\operatorname{mdc}(x-y, y) = M) \land (x-y > 0) \land (y > 0)\} \ x := x - y \ \{I\}       & \text{AA}                            \\
+	 & 7. \quad I \land (x \neq y) \land (x > y)                                                              & \text{Hipótese no Ramo If}           \\
+	 & 8. \quad \operatorname{mdc}(x,y) = M                                                                   & 7, \text{Simp de } I                 \\
+	 & 9. \quad \operatorname{mdc}(x-y, y) = \operatorname{mdc}(x,y) = M                                      & \text{Propriedade do MDC (Euclides)} \\
+	 & 10. \quad x > y \implies x - y > 0                                                                     & 7, \text{Aritmética}                 \\
+	 & 11. \quad (I \land x > y) \rightarrow ((\operatorname{mdc}(x-y, y) = M) \land (x-y > 0) \land (y > 0)) & 9, 10, \text{Lógica}                 \\
+	 & 12. \quad \{I \land x > y\} \ x := x - y \ \{I\}                                                       & 6, 11, \text{Conseq}
+\end{flalign*}
+
+\noindent \textbf{Caso B: Se $\neg(x > y)$ é verdadeiro (Ramo 'Else')}
+Como $x \neq y$ (pela guarda) e não é $x > y$, então $y > x$. A prova é simétrica ao Caso A.
+\begin{flalign*}
+	 & 13. \quad \{I \land y > x\} \ y := y - x \ \{I\} & \text{Análogo aos passos 6-12}
+\end{flalign*}
+
+\noindent Portanto, o invariante se mantém independente do caminho tomado no \textit{If}.
+
+\vspace{0.5cm}
+
+\subsection*{III. Término (Correção Total)}
+
+Para provar que o laço não é infinito, usamos a função variante $t = x + y$ com domínio nos Naturais.
+
+\begin{flalign*}
+	 & 14. \quad x > 0 \land y > 0 \implies x+y > 0                                               & \text{Do Invariante } I      \\
+	 & 15. \quad \text{Se } x > y: \ t_{new} = (x-y) + y = x < x+y = t_{old}                      & \text{Decrescimento estrito} \\
+	 & 16. \quad \text{Se } y > x: \ t_{new} = x + (y-x) = y < x+y = t_{old}                      & \text{Decrescimento estrito} \\
+	 & 17. \quad \text{O laço termina pois } t \text{ decresce e é limitado inferiormente por 0.} & \text{Conclusão}
+\end{flalign*}
+
+\vspace{0.5cm}
+
+\subsection*{IV. Finalização (Depois do laço)}
+
+Quando o laço termina, a guarda é falsa ($x = y$) e o invariante $I$ ainda é verdadeiro.
+
+\begin{flalign*}
+	 & 18. \quad \{ max = \operatorname{mdc}(a,b) \} \ max := x \ \{ max = \operatorname{mdc}(a,b) \} & \text{AA (inválido - atribuição direta)} \\
+	 & \quad \textit{Correção do passo lógico final para atribuição:}                                 &                                          \\
+	 & 19. \quad \{ x = \operatorname{mdc}(a,b) \} \ max := x \ \{ max = \operatorname{mdc}(a,b) \}   & \text{AA}                                \\
+	 & 20. \quad I \land \neg B                                                                       & \text{Estado pós-laço}                   \\
+	 & 21. \quad (\operatorname{mdc}(x,y) = \operatorname{mdc}(a,b)) \land (x = y)                    & 20, \text{Subst}                         \\
+	 & 22. \quad \operatorname{mdc}(x,x) = x                                                          & \text{Propriedade Aritmética}            \\
+	 & 23. \quad x = \operatorname{mdc}(a,b)                                                          & 21, 22, \text{Transitividade}            \\
+	 & 24. \quad (I \land \neg B) \rightarrow (x = \operatorname{mdc}(a,b))                           & 20\text{-}23, \text{PC}                  \\
+	 & 25. \quad \{I \land \neg B\} \ max := x \ \{max = \operatorname{mdc}(a,b)\}                    & 19, 24, \text{Conseq}
+\end{flalign*}
+
+\textbf{Resolução de forma indutiva:}
+Considere $W$ como o conjunto dos números naturais e a função $f(x,y) = x + y$. Usaremos $ < $.
+Assuma que $mdc(a,b) = mdc(x,y)$ e que $x \neq y$.
+Seja $s = (x,y)$. Então $f(s) = x + y$. Teremos duas possibilidades para $t$, de acordo com $x$ e $y$ na última iteração:
+
+\begin{enumerate}
+	\item Se $x < y$, então $t = (x,\, y - x)$ e f(t) = x + (y - x) = y.
+
+	\item Se $x > y$, então $t = (x - y,\, y)$ e f(t) = (x - y) + y = x.
+\end{enumerate}
+
+Como $a > 0$ e $b > 0$, temos $x > 0$ e $y > 0$. Em ambas as situações acima,
+temos $f(t) < f(s)$, pois $x < x + y$ e $y < x + y$.
+
+Portanto, o laço termina.
+
+
+O laço terminará quando x = y e, ao fim do laço, max := x. Ou seja, max := x - y ou max := a (caso x != y na primeira iteração).
+
+O laço termina quando $(x=y)$. No momento da saída do enquanto, temos $(x=y>0)$ e $mdc(x,y)=mdc(x,x)=mdc(x-y, y)$. Sabemos que $mdc(a, b)=mdc(x-y, y)$.
+O programa atribui então $(max := x)$,
+portanto $(max=mdc(a,b))$. Assim (\{P\}\ S\ \{Q\}) é verdadeiro:
+se a execução termina, a pós-condição $(mdc(a,b)=max)$ é satisfeita.
