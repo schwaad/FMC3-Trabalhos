@@ -13,4 +13,49 @@ $\{(a \geq 0) \land (b > 0)\}$
 \end{algorithmic}
 
 $\{(a = qb + r) \land (0 \leq r < b)\}$
+\\
+\\
+\\
+(Antes do laço)
+\\
+Para isso utilizaremos o invariante $(a = yb + x) \land(0 \le x)$
+\begin{flalign*}
+	 & 1. \quad \{(a = 0 \cdot b + x) \land (0 \le x)\} \ y := 0 \ \{(a = yb + x) \land (0 \le x)\} & \text{AA} \\
+	 & 2. \quad \{(a = 0 \cdot b + a) \land (0 \le a)\} \ x := a \ \{(a = 0 \cdot b + x) \land (0 \le x)\} & \text{AA} \\
+	 & 3. \quad (a \ge 0) \land (b > 0) & \text{P} \\
+	 & 4. \quad (a = 0 \cdot b + a) \land (0 \le a) & 3, \text{T} \\
+	 & 5. \quad \{a \ge 0 \land b > 0\} \ x := a; y := 0 \ \{I\} & 1, 2, 4, \text{Conseq.}
+\end{flalign*}
 
+$ \ $
+
+(Durante a execução do laço).
+\\
+Para isso faremos uma prova em cima da regra "Enquanto"
+\begin{flalign*}
+	 & 6. \quad \{(a = (y+1)b + x) \land (0 \le x)\} \ y := y + 1 \ \{I\} & \text{AA} \\
+	 & 7. \quad \{(a = (y+1)b + (x-b)) \land (0 \le x-b)\} \ x := x - b \ \{\dots\} & \text{AA} \\
+	 & 8. \quad \qquad (a = yb + x) \land (0 \le x) \land (b \le x) & \text{P para PC}  \\
+	 & 9. \quad \qquad x - b \ge 0 & 8, \text{T} \\
+	 & 10. \quad \qquad a = yb + x = yb + b + x - b = (y+1)b + (x-b) & 8, \text{T} \\
+	 & 11. \quad (I \land B) \rightarrow ((a = (y+1)b + (x-b)) \land (0 \le x-b)) & 8 -10, \text{PC} \\
+	 & 12. \quad \{I \land B\} \ x := x - b; y := y + 1 \ \{I\} & 7, 11, \text{Conseq}
+\end{flalign*}
+
+$ \ $
+
+Depois do laço
+\begin{flalign*}
+	 & 13. \quad \{(a = qb + x) \land (0 \le x < b)\} \ r := x \ \{(a = qb + r) \land (0 \le r < b)\} & \text{AA} \\
+	 & 14. \quad \{(a = yb + x) \land (0 \le x < b)\} \ q := y \ \{(a = qb + x) \land (0 \le x < b)\} & \text{AA} \\
+	 & 15. \quad \qquad (a = yb + x) \land (0 \le x) \land \neg(b \le x) & \text{P para PC}\\
+	 & 16. \qquad \quad x < b & 15, \text{Simp} \\
+	 & 17. \qquad \quad 0 \le x < b & 15, 16, \text{Conj} \\
+	 & 18. \quad (I \land \neg B) \rightarrow ((a = yb + x) \land (0 \le x < b)) & 15\text{-}17, \text{PC} \\
+	 & 19. \quad \{I \land \neg B\} \ r := x; q := y \ \{P\acute{o}s\text{-}condi\c{c}\tilde{a}o\} & 14, 18, \text{Conseq}
+\end{flalign*}
+
+$ \ $
+
+Terminação:
+O laço termina pois a variante $t = x$ é estritamente decrescente em $\mathbb{N}$. Como $b > 0$ e $x := x - b$, temos que o novo valor do x sempre será menor que o antigo valor do x. Como $0 \le x$ (pelo invariante), $x$ é limitado inferiormente.
