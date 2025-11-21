@@ -1,1 +1,15 @@
 \section*{3. (Máximo Divisor Comum). O programa a seguir afirma encontrar o máximo divisor comum mdc(a,b) de dois inteiros positivos a e b. Prove que a fórmula bem formada (fbf) está totalmente correta.}
+$\{(a > 0) \land (b > 0)\}$
+\begin{algorithmic}
+	\State $x := a$
+	\State $y := b$
+	\While{$x \neq y$}
+	\If{$x > y$}
+	\State $x := x - y$
+	\Else
+	\State $y := y - x$
+	\EndIf
+	\EndWhile
+	\State $max := x$
+\end{algorithmic}
+$\{max = \operatorname{mdc}(a,b)\}$

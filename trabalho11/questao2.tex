@@ -1,1 +1,16 @@
 \section*{2. O programa a seguir implementa o algoirtmo de divisão para números naturais. Ele calcula o quociente e o resto da divisão de um número natural por um número natural positivo. PRove que a fórmula bem formada (fbf) está totalmente correta. Dica: seja o invariante de laço $(a = yb + x) \land (0 \leq x$}
+
+$\{(a \geq 0) \land (b > 0)\}$
+\begin{algorithmic}
+	\State $x := a;$
+	\State $y := 0;$
+	\While{$b \leq x$}
+	\State $x := x - b;$
+	\State $y := y + 1$
+	\EndWhile
+	\State $r := x;$
+	\State $q := y;$
+\end{algorithmic}
+
+$\{(a = qb + r) \land (0 \leq r < b)\}$
+

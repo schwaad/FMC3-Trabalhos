@@ -1,2 +1,66 @@
-/section*{1. Dado um número natural n, o seguinte programa calcula a soma dos primeiros n números naturais. Prove que a fórmula bem formada está totalmente correta. Dica: Seja o invariante de laço $(s = i(i+1)/2 \land (i \leq n)$}
+\section*{1. Dado um número natural n, o seguinte programa calcula a soma dos primeiros n números naturais. Prove que a fórmula bem formada está totalmente correta. Dica: Seja o invariante de laço $(s = i(i+1)/2 \land (i \leq n)$}
+$\{n > 0\}$
+\begin{algorithmic}
+	\State $i := 0$
+	\State $s := 0$
+	\While {$i < n$}
+	\State $i := i+1$
+	\State $s := s+i$
+	\EndWhile
+\end{algorithmic}
+$\{s = n(n+1)/2\}$
+
+
+$ \ $
+
+
+Provarei que a fbf está totalmente correta com invariante de laço $(s = i(i+1)/2) \land (i \leq n)$
+
+
+$ \ $
+
+
+Antes do laço:
+
+\begin{flalign*}
+	 & 1. \quad \{(0 = i(i + 1)/2) \land (i \leq n)\} \  s:= 0 \ \{(s = i(i+1)/2) \land (i \leq n)\} & \text{AA}           \\
+	 & 2. \quad \{0 = 0 \land 0 \leq n\} \ i := 0 \ \{(0 = i(i + 1)/2) \land (i \leq n)\}            & \text{AA}           \\
+	 & 3. \quad n > 0                                                                                & P                   \\
+	 & 4. \quad 0 \leq n                                                                             & 3,T                 \\
+	 & 5. \quad  \{ n> 0 \} \ i := 0; s:= 0 \ \{(s = i(i+1)/2) \land (i \leq n)\}                    & \text{1,2,4,Conseq}
+\end{flalign*}
+
+
+$ \ $
+
+
+Durante a execução do laço:
+
+\begin{flalign*}
+	 & 6. \quad \{(s + i = i(i+1)/2) \land (i \leq n)\} \ s := s + i \ \{(s = i(i+1)/2) \land (i \leq n)\}                        & \text{AA}                          \\
+	 & 7. \quad \{(s + (i+1) = (i+1)(i+2)/2) \land (i + 1 \leq n)\} \ i := i + 1 \ \{(s + i = i(i+1)/2) \land (i \leq n)\}        & \text{AA}                          \\
+	 & 8. \quad (s = i(i+1)/2) \land (i \leq n) \land (i < n)                                                                     & \text{Hipótese (I} \land \text{B)} \\
+	 & 9. \quad s = i(i+1)/2                                                                                                      & 8, \text{Simp}                     \\
+	 & 10. \quad s + (i+1) = i(i+1)/2 + (i+1)                                                                                     & 9, \text{T}                        \\
+	 & 11. \quad s + (i+1) = (i+1)(i/2 + 1) = (i+1)(i+2)/2                                                                        & 10, \text{T}                       \\
+	 & 12. \quad i < n                                                                                                            & 8, \text{Simp}                     \\
+	 & 13. \quad i + 1 \leq n                                                                                                     & 12, \text{T}                       \\
+	 & 14. \quad ((s = i(i+1)/2) \land (i \leq n) \land (i < n)) \rightarrow ((s + (i+1) = (i+1)(i+2)/2) \land (i+1 \leq n))      & 11, 13, \text{PC}                  \\
+	 & 15. \quad \{(s = i(i+1)/2) \land (i \leq n) \land (i < n)\} \ i := i + 1; s := s + i \ \{(s = i(i+1)/2) \land (i \leq n)\} & 7, 14, \text{Conseq}
+\end{flalign*}
+
+
+$ \ $
+
+
+Depois do laço:
+
+
+\begin{flalign*}
+	 & 15. \quad (s = i(i+1)/2) \land (i \leq n) \land \neg(i < n) & I \land \neg B          \\
+	 & 16. \quad i \leq n \land i \geq n                           & 15, T                   \\
+	 & 17. \quad i = n                                             & 16, T                   \\
+	 & 18. \quad s = n(n+1)/2                                      & 15, 17, \text{Subst}    \\
+	 & 19. \quad I \land \neg B \rightarrow (s = n(n+1)/2)         & 15\text{-}18, \text{PC}
+\end{flalign*}
 
