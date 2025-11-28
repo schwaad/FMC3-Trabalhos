@@ -1,0 +1,14 @@
+\section*{2. Use o algoritmo de Skolem para transformar a fbf a seguir em uma forma clausulal}. 
+\[
+\forall x\, \exists y\, \exists z \; [\,(\neg p(x,y) \land q(x,z)) \lor r(x,y,z) \,].
+\]
+Utilizando o algoritmo de Skolen, teremos:
+\[
+\forall x\, \exists y\, \exists z \; [\,(\neg p(x,y) \land q(x,z)) \lor r(x,y,z) \,] \equiv
+\] 
+\[
+\forall x\; [\,(\neg p(x,f(x)) \land q(x,g(x))) \lor r(x,f(x),g(x))\,] \equiv
+\]
+\[
+\forall x\; [\,(\neg p(x,f(x)) \lor r(x,f(x),g(x)) \land \; q(x,g(x)) \lor r(x,f(x),g(x))\,] \equiv 
+\]

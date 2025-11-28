@@ -1,0 +1,36 @@
+\section*{4. Calcule a composição $\theta \sigma$ de cada um dos pares de substituições a seguir}
+\[
+\theta = \{x/f(z), y/a\}, \sigma = \{z/b\}.
+\]
+\text{1. Aplique $\sigma$ aos termos (denominadores) de $\theta$. Resulta em}
+\[
+\{x/f(z)\sigma ,y/a \sigma\} =\{x/f(b),y/a\}
+\]
+\text{2. Exclua quaisquer ligações no formato $x_i/x_i$ do conjunto do Passo 1. Resulta em}
+\[
+\{x/f(b),y/a\}
+\]
+\text{3. Exclua qualquer $y_i/s_i$ de $\sigma$ se $y_i$ for uma variável em $dom(\theta) = \{x, y\}$.}
+\\
+O conjunto $\sigma = \{z/b\}$. A variável $z$ não pertence ao domínio $\{x, y\}$ de $\theta$.
+\[
+\{z/b\}
+\]
+\text{4. $\theta \sigma$ é a união dos conjuntos construídos dos Passos 2 e 3}
+\[
+\theta \sigma = \{x/f(b), y/a, z/b\}
+\]
+\\
+\textbf{Verificação}
+\\
+Para verificar, usaremos o átomo $p(x,y,z)$, pois $x, y$ e $z$ são as variáveis distintas que ocorrem no domínio e contradomínio de $\theta$ e $\sigma$.
+\\
+\text{Primeiro cálculo:}
+\[
+(p(x,y,z)\theta)\sigma = p(f(z),a,z)\sigma = p(f(b),a,b)
+\]
+\text{Segundo cálculo:}
+\[
+p(x,y,z)(\theta \sigma) = p(f(b),a,b)
+\]
+Assim. como os resultados são os mesmos, isso confirma que a composição está correta.

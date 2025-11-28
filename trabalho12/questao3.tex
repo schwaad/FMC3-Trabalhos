@@ -1,0 +1,21 @@
+\section*{3. Encontre uma prova de resolução para mostrar que o conjunto a seguir de cláusulas proposicionais é insatisfatório:} 
+\[
+\{p \lor q,\; \lnot p \lor r,\; \lnot r \lor \lnot p,\; \lnot q \}.
+\]
+\medskip
+
+\begin{tabular}{r l l}
+1. & $p \vee q$ & P \\[4pt]
+2. & $\neg p \vee r$ & P \\[4pt]
+3. & $\neg r \vee \neg p$ & P \\[4pt]
+4. & $\neg q$ & P \\[6pt]
+5. & $p$ & 1, 4, R\\[4pt]
+6. & $r$ & 2, 5, R \\[4pt]
+7. & $\neg p$ & 3, 6, R \\[4pt]
+8. & $\square$ & 5, 7, R \\
+QED
+\end{tabular}
+
+\medskip
+
+Como a resolução produziu a cláusula vazia, o conjunto é insatisfatível.

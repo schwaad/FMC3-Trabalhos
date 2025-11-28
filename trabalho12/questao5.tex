@@ -1,0 +1,82 @@
+\section*{5. Use o algoritmo de unificação de Robinson para encontrar um unificador geral para o conjunto de átomos a seguir.}
+\[
+\{p(x,f(x),y),p(x,y,z),p(w,f(a),b)\}.
+\]
+Vamos aplicar o algoritmo ao conjunto $S = \{p(x,f(x),y),p(x,y,z),p(w,f(a),b)\}$. \\
+1. Defina $k = 0$ e $\theta_0 = \epsilon$ e vá para a Etapa 2
+\[
+\theta_0 = \epsilon
+\]
+2. Calcule $S \theta _k$
+\[
+S \theta _0 = S \epsilon= \{p(x,f(x),y),p(x,y,z),p(w,f(a),b)\} \text{ não é um conjunto unitário}
+\]
+2.2 Seja $D_k$ o conjunto de desacordo de $S \theta _k$ e vá para a Etapa 3.
+\[
+D_0=\{x,w\}
+\]
+3.1 Se $D_k$ contém uma variável v e um termo t, tal que v não ocorre em t, então calcule a composição $\theta_{k+1} = \theta_k\{v/t\}$, defina $k := k+ 1$ e vá para o  Passo 2
+\[
+\text{A variável w não ocorre no termo $x$ de $D_0$}.  
+\]
+\[
+\text{Coloque } \theta_1= \theta_0\{w/x\}=\{w/x\}
+\]
+2. Calcule $S \theta _k$
+\[
+S\theta_1=\{p(x,f(x),y),p(x,y,z),p(x,f(a),b)\}
+\]
+Não é um conjunto unitário \\
+2.2 Seja $D_k$ o conjunto de desacordo de $S \theta _k$ e vá para a Etapa 3. O desacordo ocorre no segundo argumento:
+\[
+D_1=\{f(x),y,f(a)\}
+\]
+3.1 Se $D_k$ contém uma variável v e um termo t, tal que v não ocorre em t, então calcule a composição $\theta_{k+1} = \theta_k\{v/t\}$, defina $k := k+ 1$ e vá para o  Passo 2
+\[
+\text{A variável y não ocorre no termo $f(a)$ de $D_1$}
+\]
+\[
+\text{Coloque $\theta_2=\theta_1\{y/f(a))\}=\{w/x,y/f(a)\}$}
+\]
+2. Calcule $S \theta _k$
+\[
+S\theta_2=\{p(x,f(x),f(a)),p(x,f(a),z),p(x,f(a),b)\}
+\]
+Não é um conjunto unitário \\
+2.2 Seja $D_k$ o conjunto de desacordo de $S \theta _k$ e vá para a Etapa 3.
+\[
+D_2=\{x,a\}
+\]
+3.1 Se $D_k$ contém uma variável v e um termo t, tal que v não ocorre em t, então calcule a composição $\theta_{k+1} = \theta_k\{v/t\}$, defina $k := k+ 1$ e vá para o  Passo 2
+\[
+\text{A variável x não ocorre no termo $a$ de $D_2$}
+\]
+\[
+\text{Coloque $\theta_3=\theta_2\{x/a\}=\{w/a,y/f(a),x/a\}$}
+\]
+2. Calcule $S \theta _k$
+\[
+S\theta_3=\{p(a,f(a),f(a)),p(a,f(a),z),p(a,f(a),b)\}
+\]
+Não é um conjunto unitário \\
+2.2 Seja $D_k$ o conjunto de desacordo de $S \theta _k$ e vá para a Etapa 3.
+\[
+D_3=\{f(a),z,b\}
+\]
+3.1 Se $D_k$ contém uma variável v e um termo t, tal que v não ocorre em t, então calcule a composição $\theta_{k+1} = \theta_k\{v/t\}$, defina $k := k+ 1$ e vá para o  Passo 2
+\[
+\text{A variável z não ocorre no termo $b$ de $D_3$}
+\]
+\[
+\text{Coloque $\theta_4=\theta_3\{z/b\}=\{w/a,y/f(a),x/a,z/b\}$}
+\]
+2. Calcule $S \theta _k$
+\[
+S\theta_4=\{p(a,f(a),f(a)),p(a,f(a),b)\}
+\]
+Não é um conjunto unitário \\
+2.2 Seja $D_k$ o conjunto de desacordo de $S \theta _k$ e vá para a Etapa 3. 
+\[
+D_4=\{f(a),b\}
+\]
+O conjunto $D_4$ contém apenas a função composta $f(a)$ e a constante $b$. Logo, S não é unificável.
